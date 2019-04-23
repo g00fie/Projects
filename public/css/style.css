@@ -40,7 +40,11 @@ body{
   color:#000 !important;
   font-weight:bold;
 }
-
+@media only screen and (max-width: 768px) {
+  .navbar-fixed-top{
+    position: relative;
+  }
+}
 #intro{
   margin-top: 50px;
 }
