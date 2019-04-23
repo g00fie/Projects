@@ -1,0 +1,2 @@
+# translations/messages.pl.yaml
+WrongStatusExceptionText: Powinieneś używać wartości zawartych tylko i wyłącznie w App/Model/Response/Status!
