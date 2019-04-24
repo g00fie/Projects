@@ -1,5 +1,10 @@
 {%- block form_start -%}
     <form id="registerForm">
+        <div class="form-group text-danger errors" style="display:none;">
+            <strong>{% trans %}ERROR{% endtrans %}!</strong>
+            <span id="internalError">{% trans %}INTERNAL_ERROR{% endtrans %}</span>
+            <span id="noConnectionError">{% trans %}NO_CONNECTION_ERROR{% endtrans %}!</span>
+        </div>
 {%- endblock form_start -%}
 
 {%- block form_widget_compound -%}
@@ -37,11 +42,17 @@
         {% trans %}REGISTER_FORM_ACCEPT_RULES_INFO_PART_2{% endtrans %}
     </p>
     <div class="form-group">
-        <button type="{{ type|default('button') }}" class="btn btn-primary btn-block" {{ block('attributes') }}>{{ name|trans }}</button>
+        <button type="{{ type|default('button') }}" class="btn btn-primary btn-block" {{ block('attributes') }}>
+            <span class="text">{{ name|trans }}</span>
+            <span class="loading" style="display:none;">
+                <span class="spinner-border" role="status" aria-hidden="true" style="margin-right: 3px; border-width: .2em"></span> {% trans %}LOADING{% endtrans %}...
+            </span>
+        </button>
     </div>
     <p class="text-center" style="margin-top: -10px;">
-        {% trans %}REGISTER_FORM_ACCOUNT_QUESTION{% endtrans %} <a href="">{% trans %}SIGN_UP{% endtrans %}</a>
+        {% trans %}REGISTER_FORM_ACCOUNT_QUESTION{% endtrans %} <a href="">{% trans %}SIGN_IN{% endtrans %}</a>
     </p>
+    <div class="g-recaptcha" data-sitekey="6LeZ9p8UAAAAAHcdbffht-BKLHu1rTd94BuxmM9C" data-size="invisible" style="display:none;" data-callback="onRegisterSubmit"></div>
 {%- endblock button_widget -%}
 
 {% block form_row %}
@@ -54,5 +65,10 @@
         </div>
         {% endif %}
         {{ form_widget(form) }}
+        {% if label_attr.error is defined %}
+        <small id="{{ label_attr.error.id }}" class="form-text text-danger" style="display:none;">
+            <strong>{% trans %}ERROR{% endtrans %}!</strong> {{ label_attr.error.msg|trans }}
+        </small>
+        {% endif %}
     </div>
 {% endblock %}

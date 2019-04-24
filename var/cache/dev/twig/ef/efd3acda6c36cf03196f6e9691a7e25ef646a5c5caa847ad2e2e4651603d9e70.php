@@ -50,7 +50,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <script src=\"https://code.jquery.com/jquery-3.2.1.js\"></script>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
-
+    
+    <script src=\"https://www.google.com/recaptcha/api.js\" async defer></script>
     <script src=\"/js/auth.js\"></script>
   </head>
   <body>
@@ -173,11 +174,11 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
                   </p>
                   ";
-        // line 138
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 138, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
         // line 139
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 139, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
+        // line 140
         echo "                  ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 139, $this->source); })()), 'form');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 140, $this->source); })()), 'form');
         echo "
                 </article>
               </div>
@@ -305,7 +306,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     public function getDebugInfo()
     {
-        return array (  179 => 139,  177 => 138,  38 => 1,);
+        return array (  180 => 140,  178 => 139,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -325,7 +326,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <script src=\"https://code.jquery.com/jquery-3.2.1.js\"></script>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
-
+    
+    <script src=\"https://www.google.com/recaptcha/api.js\" async defer></script>
     <script src=\"/js/auth.js\"></script>
   </head>
   <body>

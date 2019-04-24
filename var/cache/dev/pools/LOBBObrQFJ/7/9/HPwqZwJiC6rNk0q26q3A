@@ -8,7 +8,7 @@
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/API/registers',
+                    '/API/register',
                 ],
                 'name' => [
                     'register',

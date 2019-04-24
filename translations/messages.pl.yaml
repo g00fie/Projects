@@ -10,6 +10,10 @@ REGISTER_FORM_ACCOUNT_QUESTION: Posiadasz już konto?
 # GENERAL
 SIGN_IN: Zaloguj się
 SIGN_UP: Zarejestruj się
+ERROR: Błąd
+LOADING: Ładowanie
+INTERNAL_ERROR: Błąd wewnętrzny. Spróbuj ponownie później.
+NO_CONNECTION_ERROR: Sprawdź swoje połączenie z internetem
 
 # USER
 USER_USERNAME: Imię i nazwisko
@@ -18,3 +22,16 @@ USER_PHONE_NUMBER: Numer telefonu
 USER_DATE_BIRTH: Data urodzenia
 USER_PASSWORD: Hasło
 USER_REPEATED_PASSWORD: Potwierdź hasło
+
+# STATUS
+    # USER REGISTER
+INCORRECT_PASSWORD: Podane hasła nie są identyczne!
+USED_EMAIL: Istnieje już konto powiązane z tym adresem email.
+        # DEV - użytkownik nigdy nie powinien mieć styczności z tymi błędami
+WRONG_DATE_BIRTH_FORMAT: Niepoprawny format daty urodzenia. Poprawny format to 'dd.mm.yyyy'.
+WRONG_EMAIL_VALIDATION: Niepoprawna walidacja adresu email.
+WRONG_PHONE_NUMBER_FORMAT: Niepoprawny format numeru telefony. Poprawny format to 9 cyfr.
+TOO_MUCH_CHARACTERS: Przekroczono maksymalną ilość znaków.
+TOO_FEW_CHARACTERS: Podano za małą ilość znaków.
+        # NEVER - ten błąd nigdy nie powinien zostać wywołany
+USER_EXCEPTION: Nieznany błąd związany z użytkownikiem.

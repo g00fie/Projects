@@ -111,10 +111,10 @@ class User implements UserInterface
         return (string) $this->password;
     }
 
-    public function setPassword(string $password, UserPasswordEncoderInterface $userPasswordEncoder, ?string $repeatPassword=NULL): self
+    public function setPassword(string $password, UserPasswordEncoderInterface $userPasswordEncoder): self
     {
-        if(NULL !== $repeatPassword && $password !== $repeatPassword)
-            throw new UserException\IncorrectPasswordException();
+        if(strlen($password) < 7)
+            throw new UserException\TooFewCharactersException();
         $this->password = $userPasswordEncoder->encodePassword($this, $password);
 
         return $this;

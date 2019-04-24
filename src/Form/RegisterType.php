@@ -33,6 +33,10 @@ class RegisterType extends AbstractType{
                 ],
                 "label_attr" => [
                     "icon_class" => "fa-envelope",
+                    "error" => [
+                        "id" => "usedEmail",
+                        "msg" => "USED_EMAIL",
+                    ],
                 ],
             ])
             ->add("phoneNumber", TelType::class, [
@@ -62,6 +66,7 @@ class RegisterType extends AbstractType{
                 "attr" => [
                     "placeholder" => "USER_PASSWORD",
                     "title" => "USER_PASSWORD",
+                    "minlength" => 7
                 ],
                 "label_attr" => [
                     "icon_class" => "fa-lock",
@@ -71,12 +76,21 @@ class RegisterType extends AbstractType{
                 "attr" => [
                     "placeholder" => "USER_REPEATED_PASSWORD",
                     "title" => "USER_REPEATED_PASSWORD",
+                    "minlength" => 7
                 ],
                 "label_attr" => [
                     "icon_class" => "fa-lock",
+                    "error" => [
+                        "id" => "incorrectPassword",
+                        "msg" => "INCORRECT_PASSWORD",
+                    ],
                 ],
             ])
-            ->add("SIGN_UP", SubmitType::class)
+            ->add("SIGN_UP", SubmitType::class, [
+                "attr" => [
+                    "id" => "submitRegister",
+                ],
+            ])
         ;
     }
 }
