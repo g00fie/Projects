@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\src</parameter>
-    <parameter key="kernel.project_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie</parameter>
+    <parameter key="kernel.root_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie\src</parameter>
+    <parameter key="kernel.project_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
-    <parameter key="kernel.cache_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\log</parameter>
+    <parameter key="kernel.cache_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="WebServerBundle">Symfony\Bundle\WebServerBundle\WebServerBundle</parameter>
@@ -21,39 +21,39 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\web-server-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\web-server-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\sensio\framework-extra-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\sensio\framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="DoctrineCacheBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\doctrine\doctrine-cache-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\doctrine\doctrine-cache-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineCacheBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
     </parameter>
@@ -78,13 +78,18 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
+    <parameter key="form.type_extension.csrf.enabled">true</parameter>
+    <parameter key="form.type_extension.csrf.field_name">_token</parameter>
+    <parameter key="validator.mapping.cache.prefix"></parameter>
+    <parameter key="validator.mapping.cache.file">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie/translations</parameter>
+    <parameter key="translator.default_path">B:\PROGRAMOWANIE\PROJEKTY\umowsie/translations</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/srcApp_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/srcApp_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -96,7 +101,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</parameter>
+    <parameter key="twig.default_path">B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</parameter>
     <parameter key="doctrine_cache.apc.class">Doctrine\Common\Cache\ApcCache</parameter>
     <parameter key="doctrine_cache.apcu.class">Doctrine\Common\Cache\ApcuCache</parameter>
     <parameter key="doctrine_cache.array.class">Doctrine\Common\Cache\ArrayCache</parameter>
@@ -204,9 +209,9 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
-    <parameter key="doctrine_migrations.dir_name">B:\PROGRAMOWANIE\PROJEKTY\Umowsie/src/Migrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">B:\PROGRAMOWANIE\PROJEKTY\umowsie/src/Migrations</parameter>
     <parameter key="doctrine_migrations.namespace">DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.column_name">version</parameter>
@@ -260,6 +265,9 @@
     <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Form\RegisterType" class="App\Form\RegisterType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -315,7 +323,7 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged" tag="kernel.cache_clearer"/>
@@ -324,9 +332,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\src/Resources</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\src/Resources</argument>
       <argument type="collection">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\src</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\src</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner" public="false">
@@ -346,13 +354,17 @@
       <argument type="iterator">
         <argument key="http_exception_listener" type="service" id="http_exception_listener" on-invalid="ignore_uninitialized"/>
         <argument key="session" type="service" id="session" on-invalid="ignore_uninitialized"/>
+        <argument key="form.choice_list_factory.cached" type="service" id="form.choice_list_factory.cached" on-invalid="ignore_uninitialized"/>
         <argument key="debug.stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
+        <argument key="form.type.entity" type="service" id="form.type.entity" on-invalid="ignore_uninitialized"/>
         <argument key="security.token_storage" type="service" id="security.token_storage" on-invalid="ignore_uninitialized"/>
       </argument>
       <argument type="collection">
         <argument key="http_exception_listener">reset</argument>
         <argument key="session">save</argument>
+        <argument key="form.choice_list_factory.cached">reset</argument>
         <argument key="debug.stopwatch">reset</argument>
+        <argument key="form.type.entity">reset</argument>
         <argument key="security.token_storage">setToken</argument>
       </argument>
     </service>
@@ -473,8 +485,8 @@
       <argument type="service" id="translator.default"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/translations</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/translations</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</argument>
       <call method="setName">
         <argument>debug:translation</argument>
       </call>
@@ -485,8 +497,8 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>pl</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/translations</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/translations</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</argument>
       <call method="setName">
         <argument>translation:update</argument>
       </call>
@@ -503,11 +515,42 @@
         <argument>lint:yaml</argument>
       </call>
     </service>
+    <service id="console.command.form_debug" class="Symfony\Component\Form\Command\DebugCommand" public="false">
+      <tag name="console.command" command="debug:form"/>
+      <argument type="service" id="form.registry"/>
+      <argument type="collection">
+        <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
+        <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
+      </argument>
+      <argument type="collection">
+        <argument>App\Form\RegisterType</argument>
+        <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
+        <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
+        <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
+      </argument>
+      <argument type="collection">
+        <argument>Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension</argument>
+        <argument>Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\FormTypeValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\UploadValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension</argument>
+      </argument>
+      <argument type="collection">
+        <argument>Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser</argument>
+        <argument>Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser</argument>
+      </argument>
+      <call method="setName">
+        <argument>debug:form</argument>
+      </call>
+    </service>
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="true">
       <tag name="cache.pool"/>
-      <argument>1N2oKecPKg</argument>
+      <argument>PpDgRzyyug</argument>
       <argument>0</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -521,37 +564,37 @@
     </service>
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
-      <argument>BIdGd6ogXj</argument>
+      <argument>+zXPeGciRl</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>TqTm1FZpQZ</argument>
+      <argument>UUi0Pr9wY1</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>Mp6bFKAdjD</argument>
+      <argument>nbhtV0JvHV</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>2IW8wm2P-Y</argument>
+      <argument>LOBBObrQFJ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -561,7 +604,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -590,7 +633,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -679,8 +722,8 @@
     <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false">
       <deprecated>The "%service_id%" service is deprecated since Symfony 4.2, use "identity_translator" instead.</deprecated>
     </service>
-    <service id=".1_NativeFileSessionHandler~Qm9k.V9" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/sessions</argument>
+    <service id=".1_NativeFileSessionHandler~Fi418HW" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <tag name="kernel.reset" method="save"/>
@@ -704,12 +747,12 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/sessions</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~Qm9k.V9"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~Fi418HW"/>
     </service>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -736,6 +779,158 @@
     </service>
     <service id="twig.extension.security_csrf" class="Symfony\Bridge\Twig\Extension\CsrfExtension" public="false">
       <tag name="twig.extension"/>
+    </service>
+    <service id="form.resolved_type_factory" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id="form.registry" class="Symfony\Component\Form\FormRegistry" public="false">
+      <argument type="collection">
+        <argument type="service" id="form.extension"/>
+      </argument>
+      <argument type="service" id="form.resolved_type_factory"/>
+    </service>
+    <service id="form.factory" class="Symfony\Component\Form\FormFactory" public="true">
+      <argument type="service" id="form.registry"/>
+    </service>
+    <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
+      <argument type="service" id=".service_locator.cpsDf_8"/>
+      <argument type="collection">
+        <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
+          <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
+          <argument type="service" id="form.type_extension.form.http_foundation"/>
+          <argument type="service" id="form.type_extension.form.validator"/>
+          <argument type="service" id="form.type_extension.upload.validator"/>
+          <argument type="service" id="form.type_extension.csrf"/>
+        </argument>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\RepeatedType" type="iterator">
+          <argument type="service" id="form.type_extension.repeated.validator"/>
+        </argument>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\SubmitType" type="iterator">
+          <argument type="service" id="form.type_extension.submit.validator"/>
+        </argument>
+      </argument>
+      <argument type="iterator">
+        <argument type="service" id="form.type_guesser.validator"/>
+        <argument type="service" id="form.type_guesser.doctrine"/>
+      </argument>
+    </service>
+    <service id="form.type_guesser.validator" class="Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser" public="false">
+      <tag name="form.type_guesser"/>
+      <argument type="service" id="validator"/>
+    </service>
+    <service id="form.choice_list_factory.default" class="Symfony\Component\Form\ChoiceList\Factory\DefaultChoiceListFactory" public="false"/>
+    <service id="form.choice_list_factory.property_access" class="Symfony\Component\Form\ChoiceList\Factory\PropertyAccessDecorator" public="false">
+      <argument type="service" id="form.choice_list_factory.default"/>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="form.choice_list_factory.cached" class="Symfony\Component\Form\ChoiceList\Factory\CachingFactoryDecorator" public="false">
+      <tag name="kernel.reset" method="reset"/>
+      <argument type="service" id="form.choice_list_factory.property_access"/>
+    </service>
+    <service id="form.type.form" class="Symfony\Component\Form\Extension\Core\Type\FormType" public="false">
+      <tag name="form.type"/>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="form.type.choice" class="Symfony\Component\Form\Extension\Core\Type\ChoiceType" public="false">
+      <tag name="form.type"/>
+      <argument type="service" id="form.choice_list_factory.cached"/>
+    </service>
+    <service id="form.type.file" class="Symfony\Component\Form\Extension\Core\Type\FileType" public="true">
+      <argument type="service" id="translator.default" on-invalid="ignore"/>
+    </service>
+    <service id="form.type_extension.form.transformation_failure_handling" class="Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension" public="false">
+      <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument type="service" id="translator.default" on-invalid="ignore"/>
+    </service>
+    <service id="form.type_extension.form.http_foundation" class="Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension" public="false">
+      <tag name="form.type_extension"/>
+      <argument type="service" id="form.type_extension.form.request_handler"/>
+    </service>
+    <service id="form.type_extension.form.request_handler" class="Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationRequestHandler" public="false">
+      <argument type="service" id="form.server_params"/>
+    </service>
+    <service id="form.server_params" class="Symfony\Component\Form\Util\ServerParams" public="false">
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="form.type_extension.form.validator" class="Symfony\Component\Form\Extension\Validator\Type\FormTypeValidatorExtension" public="false">
+      <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument type="service" id="validator"/>
+    </service>
+    <service id="form.type_extension.repeated.validator" class="Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension" public="false">
+      <tag name="form.type_extension"/>
+    </service>
+    <service id="form.type_extension.submit.validator" class="Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension" public="false">
+      <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\SubmitType" extended-type="Symfony\Component\Form\Extension\Core\Type\SubmitType"/>
+    </service>
+    <service id="form.type_extension.upload.validator" class="Symfony\Component\Form\Extension\Validator\Type\UploadValidatorExtension" public="false">
+      <tag name="form.type_extension"/>
+      <argument type="service" id="translator.default"/>
+      <argument>validators</argument>
+    </service>
+    <service id="form.type_extension.csrf" class="Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension" public="false">
+      <tag name="form.type_extension"/>
+      <argument type="service" id="security.csrf.token_manager"/>
+      <argument>true</argument>
+      <argument>_token</argument>
+      <argument type="service" id="translator.default" on-invalid="null"/>
+      <argument>validators</argument>
+      <argument type="service" id="form.server_params"/>
+    </service>
+    <service id=".1_PhpArrayAdapter~gO_NWcA" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/validation.php</argument>
+      <argument type="service" id="cache.validator"/>
+      <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
+    </service>
+    <service id="validator" class="Symfony\Component\Validator\Validator\ValidatorInterface" public="true">
+      <factory service="validator.builder" method="getValidator"/>
+    </service>
+    <service id="validator.builder" class="Symfony\Component\Validator\ValidatorBuilderInterface" public="false">
+      <call method="setConstraintValidatorFactory">
+        <argument type="service" id="validator.validator_factory"/>
+      </call>
+      <call method="setTranslator">
+        <argument type="service">
+          <service class="Symfony\Component\Validator\Util\LegacyTranslatorProxy">
+            <argument type="service" id="translator.default"/>
+          </service>
+        </argument>
+      </call>
+      <call method="setTranslationDomain">
+        <argument>validators</argument>
+      </call>
+      <call method="addXmlMappings">
+        <argument type="collection">
+          <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/config/validation.xml</argument>
+        </argument>
+      </call>
+      <call method="enableAnnotationMapping">
+        <argument type="service" id="annotations.cached_reader"/>
+      </call>
+      <call method="addMethodMapping">
+        <argument>loadValidatorMetadata</argument>
+      </call>
+      <call method="addObjectInitializers">
+        <argument type="collection">
+          <argument type="service" id="doctrine.orm.validator_initializer"/>
+        </argument>
+      </call>
+      <factory class="Symfony\Component\Validator\Validation" method="createValidatorBuilder"/>
+    </service>
+    <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
+      <tag name="kernel.cache_warmer"/>
+      <argument type="service" id="validator.builder"/>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/validation.php</argument>
+    </service>
+    <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
+      <argument type="service" id=".1_PhpArrayAdapter~gO_NWcA"/>
+    </service>
+    <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
+      <argument type="service" id=".service_locator.37xBtZ2"/>
+    </service>
+    <service id="validator.expression" class="Symfony\Component\Validator\Constraints\ExpressionValidator" public="false">
+      <tag name="validator.constraint_validator" alias="validator.expression"/>
+    </service>
+    <service id="validator.email" class="Symfony\Component\Validator\Constraints\EmailValidator" public="false">
+      <tag name="validator.constraint_validator" alias="Symfony\Component\Validator\Constraints\EmailValidator"/>
+      <argument>html5</argument>
     </service>
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator" public="false">
       <argument type="service" id=".service_locator.yQVjGlt"/>
@@ -779,136 +974,252 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/translations</argument>
+        <argument key="cache_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
+          <argument key="af" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
+          </argument>
           <argument key="ar" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+          </argument>
+          <argument key="cy" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/translations\messages.en.yaml</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/translations\messages.en.yaml</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+          </argument>
+          <argument key="et" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
+          </argument>
+          <argument key="eu" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+          </argument>
+          <argument key="fi" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+          </argument>
+          <argument key="hy" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+          </argument>
+          <argument key="mn" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/translations\messages.pl.yaml</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/translations\messages.pl.yaml</argument>
+          </argument>
+          <argument key="pt" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
-          </argument>
-          <argument key="pt_PT" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.pt_PT.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+          </argument>
+          <argument key="sq" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+          </argument>
+          <argument key="zh_TW" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
+          </argument>
+          <argument key="pt_PT" type="collection">
+            <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-core/Resources/translations\security.pt_PT.xlf</argument>
           </argument>
         </argument>
       </argument>
@@ -1286,14 +1597,6 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -1521,7 +1824,7 @@
       <argument type="service" id=".service_locator.MAfdX1A.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev</argument>
+        <argument key="cache_dir">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -1563,7 +1866,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1589,12 +1892,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~zA.K1yr" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~1jrz4Up" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~zA.K1yr" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~1jrz4Up" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1609,7 +1912,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~zA.K1yr"/>
+      <argument type="service" id=".1_ArrayCache~1jrz4Up"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1619,12 +1922,12 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/annotations.php</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~zA.K1yr"/>
+      <argument type="service" id=".2_PhpArrayAdapter~1jrz4Up"/>
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor" public="false">
       <argument>false</argument>
@@ -1633,7 +1936,7 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/public</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:run</argument>
@@ -1641,7 +1944,7 @@
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/public</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:start</argument>
@@ -1727,7 +2030,7 @@
     <service id="twig" class="Twig\Environment" public="true">
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
-        <argument key="default_path">B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</argument>
+        <argument key="default_path">B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
         <argument key="exception_controller">twig.controller.exception::showAction</argument>
@@ -1735,7 +2038,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/twig</argument>
+        <argument key="cache">B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -1777,6 +2080,9 @@
         <argument type="service" id="twig.extension.httpfoundation"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.form"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.logout_url"/>
       </call>
       <call method="addExtension">
@@ -1816,13 +2122,17 @@
       <tag name="container.service_subscriber" id="twig"/>
       <argument type="service" id=".service_locator.lSIKWsr.twig.cache_warmer"/>
       <argument>null</argument>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+      </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\src</argument>
-      <argument type="collection"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\src</argument>
+      <argument type="collection">
+        <argument key="B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+      </argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
@@ -1833,41 +2143,44 @@
     <service id="twig.loader.native_filesystem" class="Symfony\Bundle\TwigBundle\Loader\NativeFilesystemLoader" public="false">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\twig-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\twig-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\twig-bundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</argument>
+      </call>
+      <call method="addPath">
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -1889,7 +2202,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -1950,15 +2263,31 @@
       <argument>,</argument>
     </service>
     <service id="twig.runtime_loader" class="Twig\RuntimeLoader\ContainerRuntimeLoader" public="false">
-      <argument type="service" id=".service_locator.xEWwCJt"/>
+      <argument type="service" id=".service_locator.uxa.tru"/>
+    </service>
+    <service id="twig.extension.form" class="Symfony\Bridge\Twig\Extension\FormExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="collection">
+        <argument type="service" id="service_container"/>
+        <argument>twig.form.renderer</argument>
+      </argument>
+    </service>
+    <service id="twig.form.engine" class="Symfony\Bridge\Twig\Form\TwigRendererEngine" public="false">
+      <argument>%twig.form.resources%</argument>
+      <argument type="service" id="twig"/>
+    </service>
+    <service id="twig.form.renderer" class="Symfony\Component\Form\FormRenderer" public="false">
+      <tag name="twig.runtime"/>
+      <argument type="service" id="twig.form.engine"/>
+      <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
     </service>
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie/templates</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\src</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie/templates</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\src</argument>
       <call method="setName">
         <argument>debug:twig</argument>
       </call>
@@ -2120,6 +2449,7 @@
     </service>
     <service id="form.type.entity" class="Symfony\Bridge\Doctrine\Form\Type\EntityType">
       <tag name="form.type" alias="entity"/>
+      <tag name="kernel.reset" method="reset"/>
       <argument type="service" id="doctrine"/>
     </service>
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" public="false" abstract="true"/>
@@ -2266,7 +2596,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2296,7 +2626,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\src\Entity</argument>
+        <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\src\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -2307,17 +2637,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_32f19bee2ac2e3866625e5522b849e40d8c0207ae4b97b4a191105e9d1d120cb</argument>
+        <argument>sf_orm_default_aa0e5a0952596f346daa157d64a8e518e843946d2a537f07bf986c862002d125</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_32f19bee2ac2e3866625e5522b849e40d8c0207ae4b97b4a191105e9d1d120cb</argument>
+        <argument>sf_orm_default_aa0e5a0952596f346daa157d64a8e518e843946d2a537f07bf986c862002d125</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_32f19bee2ac2e3866625e5522b849e40d8c0207ae4b97b4a191105e9d1d120cb</argument>
+        <argument>sf_orm_default_aa0e5a0952596f346daa157d64a8e518e843946d2a537f07bf986c862002d125</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -2369,7 +2699,7 @@
     <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false"/>
     <service id="maker.autoloader_util" class="Symfony\Bundle\MakerBundle\Util\AutoloaderUtil" public="false">
@@ -2425,7 +2755,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
       <argument type="service" id="maker.generator"/>
     </service>
     <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures" public="false">
@@ -2475,7 +2805,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie</argument>
     </service>
     <service id="security.authorization_checker" class="Symfony\Component\Security\Core\Authorization\AuthorizationChecker" public="true">
       <argument type="service" id="security.token_storage"/>
@@ -2600,10 +2930,10 @@
     </service>
     <service id="cache.security_expression_language" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>yJJx1EundE</argument>
+      <argument>AHOX0iHjCM</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\PROGRAMOWANIE\PROJEKTY\Umowsie\var\cache\dev/pools</argument>
+      <argument>B:\PROGRAMOWANIE\PROJEKTY\umowsie\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -3046,6 +3376,8 @@
     <service id=".abstract.instanceof.App\Controller\MainController" class="App\Controller\MainController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegisterType" class="App\Form\RegisterType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RegisterType" class="App\Form\RegisterType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -3223,6 +3555,18 @@
         <argument key="App\Controller\API\AuthController:register" type="service" id=".service_locator.OsafT.q"/>
       </argument>
     </service>
+    <service id=".service_locator.37xBtZ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator" type="service" id="doctrine.orm.validator.unique"/>
+        <argument key="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator" type="service" id="security.validator.user_password"/>
+        <argument key="Symfony\Component\Validator\Constraints\EmailValidator" type="service" id="validator.email"/>
+        <argument key="Symfony\Component\Validator\Constraints\ExpressionValidator" type="service" id="validator.expression"/>
+        <argument key="doctrine.orm.validator.unique" type="service" id="doctrine.orm.validator.unique"/>
+        <argument key="security.validator.user_password" type="service" id="security.validator.user_password"/>
+        <argument key="validator.expression" type="service" id="validator.expression"/>
+      </argument>
+    </service>
     <service id=".service_locator.yQVjGlt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -3280,6 +3624,15 @@
       <argument type="service" id="debug.argument_resolver.variadic.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
+    <service id=".service_locator.cpsDf_8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Form\RegisterType" type="service" id="App\Form\RegisterType"/>
+        <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
+      </argument>
+    </service>
     <service id=".service_locator.Otd28_S" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -3324,6 +3677,7 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine" type="service" id="doctrine" on-invalid="ignore"/>
+        <argument key="form.factory" type="service" id="form.factory" on-invalid="ignore"/>
         <argument key="http_kernel" type="service" id="http_kernel" on-invalid="ignore"/>
         <argument key="parameter_bag" type="service" id="parameter_bag" on-invalid="ignore"/>
         <argument key="request_stack" type="service" id="request_stack" on-invalid="ignore"/>
@@ -3440,7 +3794,7 @@
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.bwGR.m7"/>
+      <argument type="service" id=".service_locator.rda8632"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -3460,6 +3814,7 @@
         <argument key="translation:update">console.command.translation_update</argument>
         <argument key="lint:xliff">console.command.xliff_lint</argument>
         <argument key="lint:yaml">console.command.yaml_lint</argument>
+        <argument key="debug:form">console.command.form_debug</argument>
         <argument key="server:run">web_server.command.server_run</argument>
         <argument key="server:start">web_server.command.server_start</argument>
         <argument key="server:stop">web_server.command.server_stop</argument>
@@ -3507,7 +3862,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.bwGR.m7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.rda8632" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -3522,6 +3877,7 @@
         <argument key="console.command.container_debug" type="service" id="console.command.container_debug"/>
         <argument key="console.command.debug_autowiring" type="service" id="console.command.debug_autowiring"/>
         <argument key="console.command.event_dispatcher_debug" type="service" id="console.command.event_dispatcher_debug"/>
+        <argument key="console.command.form_debug" type="service" id="console.command.form_debug"/>
         <argument key="console.command.router_debug" type="service" id="console.command.router_debug"/>
         <argument key="console.command.router_match" type="service" id="console.command.router_match"/>
         <argument key="console.command.translation_debug" type="service" id="console.command.translation_debug"/>
@@ -3575,11 +3931,12 @@
         <argument key="web_server.command.server_stop" type="service" id="web_server.command.server_stop"/>
       </argument>
     </service>
-    <service id=".service_locator.xEWwCJt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.uxa.tru" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Twig\Extension\CsrfRuntime" type="service" id="twig.runtime.security_csrf"/>
         <argument key="Symfony\Bridge\Twig\Extension\HttpKernelRuntime" type="service" id="twig.runtime.httpkernel"/>
+        <argument key="Symfony\Component\Form\FormRenderer" type="service" id="twig.form.renderer"/>
       </argument>
     </service>
     <service id="Psr\Container\ContainerInterface" alias="service_container" public="false"/>
@@ -3610,6 +3967,13 @@
     <service id="Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface" alias="security.csrf.token_generator" public="false"/>
     <service id="Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface" alias="security.csrf.token_storage" public="false"/>
     <service id="Symfony\Component\Security\Csrf\CsrfTokenManagerInterface" alias="security.csrf.token_manager" public="false"/>
+    <service id="Symfony\Component\Form\ResolvedFormTypeFactoryInterface" alias="form.resolved_type_factory" public="false"/>
+    <service id="Symfony\Component\Form\FormRegistryInterface" alias="form.registry" public="false"/>
+    <service id="Symfony\Component\Form\FormFactoryInterface" alias="form.factory" public="false"/>
+    <service id="form.property_accessor" alias="property_accessor" public="false"/>
+    <service id="form.choice_list_factory" alias="form.choice_list_factory.cached" public="false"/>
+    <service id="Symfony\Component\Validator\Validator\ValidatorInterface" alias="validator" public="false"/>
+    <service id="validator.mapping.class_metadata_factory" alias="validator" public="false"/>
     <service id="Symfony\Component\Translation\Reader\TranslationReaderInterface" alias="translation.reader" public="false"/>
     <service id="Symfony\Component\Translation\Extractor\ExtractorInterface" alias="translation.extractor" public="false"/>
     <service id="Symfony\Component\Translation\Writer\TranslationWriterInterface" alias="translation.writer" public="false"/>

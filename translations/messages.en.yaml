@@ -1,2 +1,20 @@
 # translations/messages.en.yaml
-WrongStatusExceptionText: You should use only values from App/Model/Response/Status!
+
+# REGISTER_FORM
+REGISTER_FORM_ACCEPT_RULES_INFO_PART_1: By clicking Register button, you accept our
+REGISTER_FORM_ANNOTATION_1: Regulations
+REGISTER_FORM_ANNOTATION_2: Rules concerning data inform
+REGISTER_FORM_ACCEPT_RULES_INFO_PART_2: how we collect, use and share user's data.
+REGISTER_FORM_ACCOUNT_QUESTION: Already have an account?
+
+# GENERAL
+SIGN_IN: Sign in
+SIGN_UP: Sign up
+
+# USER
+USER_USERNAME: First name and last name
+USER_EMAIL: Email address
+USER_PHONE_NUMBER: Phone number
+USER_DATE_BIRTH: Date of birth
+USER_PASSWORD: Password
+USER_REPEATED_PASSWORD: Confirm password

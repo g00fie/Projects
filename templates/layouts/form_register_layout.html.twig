@@ -1,0 +1,58 @@
+{%- block form_start -%}
+    <form id="registerForm">
+{%- endblock form_start -%}
+
+{%- block form_widget_compound -%}
+    {{- block('form_rows') -}}
+{%- endblock form_widget_compound -%}
+
+{% block attributes -%}
+    {%- for attrname, attrvalue in attr -%}
+        {{- " " -}}
+        {%- if attrname in ['placeholder', 'title'] -%}
+            {{- attrname }}="{{ attrvalue|trans }}"
+        {%- elseif attrvalue is same as(true) -%}
+            {{- attrname }}="{{ attrname }}"
+        {%- elseif attrvalue is not same as(false) -%}
+            {{- attrname }}="{{ attrvalue }}"
+        {%- endif -%}
+    {%- endfor -%}
+{%- endblock attributes -%}
+
+{%- block widget_attributes -%}
+    name="{{ name }}"
+    {%- if required %} required="required"{% endif -%}
+    {{ block('attributes') }}
+{%- endblock widget_attributes -%}
+
+{%- block form_widget_simple -%}
+    <input type="{{ type|default('text') }}" class="form-control" {{ block('widget_attributes') }} />
+{%- endblock form_widget_simple -%}
+
+{%- block button_widget -%}
+    <p class="text-center" style="font-size: 12px;">
+        {% trans %}REGISTER_FORM_ACCEPT_RULES_INFO_PART_1{% endtrans %}
+        <a href="#">{% trans %}REGISTER_FORM_ANNOTATION_1{% endtrans %}</a>.
+        <a href="#">{% trans %}REGISTER_FORM_ANNOTATION_2{% endtrans %}</a>
+        {% trans %}REGISTER_FORM_ACCEPT_RULES_INFO_PART_2{% endtrans %}
+    </p>
+    <div class="form-group">
+        <button type="{{ type|default('button') }}" class="btn btn-primary btn-block" {{ block('attributes') }}>{{ name|trans }}</button>
+    </div>
+    <p class="text-center" style="margin-top: -10px;">
+        {% trans %}REGISTER_FORM_ACCOUNT_QUESTION{% endtrans %} <a href="">{% trans %}SIGN_UP{% endtrans %}</a>
+    </p>
+{%- endblock button_widget -%}
+
+{% block form_row %}
+    <div class="form-group input-group">
+        {% if label_attr.icon_class is defined %}
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+                <i class="fa {{ label_attr.icon_class }}"></i>
+            </span>
+        </div>
+        {% endif %}
+        {{ form_widget(form) }}
+    </div>
+{% endblock %}

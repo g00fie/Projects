@@ -17,14 +17,8 @@ use App\Exception\UserException\UserException;
 class AuthController extends AbstractController{
     /**
     * @Route(
-    *    "/{_locale}/API/register",
-    *    requirements={"_locale": "pl|en"},
-    *    name="register"
-    * )
-    *
-    * @Route(
     *    "/API/register",
-    *    name="register-default-locale"
+    *    name="register"
     * )
     */
     public function register(Request $request, TranslatorInterface $translator, UserPasswordEncoderInterface $userPasswordEncoder, EntityManagerInterface $entityManager){

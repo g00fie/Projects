@@ -1,0 +1,11 @@
+1. Dokończyć skrypt Auth.js - dodać loadera, obsługę błędów http i obsługę błędów wewnętrznych
+2. Ustawić 'kody' błędów i sukcesu dla rejestracji zamiast tekstowych odnośników
+3. Wypisanie błędów w formularzu
+4. Opisanie nowych klas za pomocą PHPDoc
+5. Walidacja formularza za pomocą Symfony Form Validation
+6. Dodanie invisible recaptcha v2
+
+7. Rejestracja za pomocą google, ...
+
+8. Logowanie
+9. Formularz kontaktowy

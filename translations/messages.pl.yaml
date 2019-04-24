@@ -1,2 +1,20 @@
 # translations/messages.pl.yaml
-WrongStatusExceptionText: Powinieneś używać wartości zawartych tylko i wyłącznie w App/Model/Response/Status!
+
+# REGISTER_FORM
+REGISTER_FORM_ACCEPT_RULES_INFO_PART_1: Klikając przycisk Zarejestruj, akceptujesz nasz
+REGISTER_FORM_ANNOTATION_1: Regulamin
+REGISTER_FORM_ANNOTATION_2: Zasady dotyczące danych informują
+REGISTER_FORM_ACCEPT_RULES_INFO_PART_2: , w jaki sposób gromadzimy, użytkujemy i udostępniamy dane użytkowników.
+REGISTER_FORM_ACCOUNT_QUESTION: Posiadasz już konto?
+
+# GENERAL
+SIGN_IN: Zaloguj się
+SIGN_UP: Zarejestruj się
+
+# USER
+USER_USERNAME: Imię i nazwisko
+USER_EMAIL: Adres email
+USER_PHONE_NUMBER: Numer telefonu
+USER_DATE_BIRTH: Data urodzenia
+USER_PASSWORD: Hasło
+USER_REPEATED_PASSWORD: Potwierdź hasło
