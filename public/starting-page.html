@@ -59,7 +59,7 @@
           <a href="#" id="forgot_pswd">Zapomniałeś hasła?</a>
           <hr>
           
-          <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus" style="padding-right: 10px;"></i> Zarejestruj się</button>
+          <button class="btn btn-primary btn-block" type="button" id="btn-signup" onclick="registerclick()"><i class="fas fa-user-plus" style="padding-right: 10px;"></i> Zarejestruj się</button>
         </form>
         <form action="" class="form-reset">
           <input type="email" id="resetEmail" class="form-control" placeholder="Adres email" required="" autofocus="">
@@ -340,6 +340,10 @@
       });
     }
 
+    function registerclick(){
+      document.getElementById("buttonreg").click();
+      modal.style.display = "none";
+    }
     </script>
   </body>
 </html>
