@@ -21,13 +21,11 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = [
         '_twig_error_test' => [['code', '_format'], ['_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
-        'register' => [['_locale'], ['_controller' => 'App\\Controller\\API\\AuthController::register'], ['_locale' => 'pl|en'], [['text', '/API/register'], ['variable', '/', 'pl|en', '_locale', true]], [], []],
-        'register-default-locale' => [[], ['_controller' => 'App\\Controller\\API\\AuthController::register'], [], [['text', '/API/register']], [], []],
-        'default' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
-        'index' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/index']], [], []],
-        'home' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/home']], [], []],
-        'start' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/start']], [], []],
-        'intro' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/intro']], [], []],
+        'register' => [[], ['_controller' => 'App\\Controller\\API\\AuthController::register'], [], [['text', '/API/register']], [], []],
+        'main-page' => [['_locale'], ['_controller' => 'App\\Controller\\MainController::index'], ['_locale' => 'pl|en'], [['text', '/'], ['variable', '/', 'pl|en', '_locale', true]], [], []],
+        'main-page-default-locale' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
+        'home' => [['_locale'], ['_controller' => 'App\\Controller\\MainController::index'], ['_locale' => 'pl|en'], [['text', '/home'], ['variable', '/', 'pl|en', '_locale', true]], [], []],
+        'home-default-locale' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/home']], [], []],
     ];
         }
     }

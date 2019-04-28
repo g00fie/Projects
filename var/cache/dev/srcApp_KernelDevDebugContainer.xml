@@ -1597,6 +1597,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -3540,18 +3548,19 @@
         <argument>make:migration</argument>
       </call>
     </service>
-    <service id=".service_locator.ploXuKF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.dvTmdr8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
         <argument key="userPasswordEncoder" type="service" id="security.user_password_encoder.generic"/>
+        <argument key="validator" type="service" id="validator"/>
       </argument>
     </service>
-    <service id=".service_locator.J5L7Wk0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qkVaeAI" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\API\AuthController::register" type="service" id=".service_locator.ploXuKF"/>
-        <argument key="App\Controller\API\AuthController:register" type="service" id=".service_locator.ploXuKF"/>
+        <argument key="App\Controller\API\AuthController::register" type="service" id=".service_locator.dvTmdr8"/>
+        <argument key="App\Controller\API\AuthController:register" type="service" id=".service_locator.dvTmdr8"/>
       </argument>
     </service>
     <service id=".service_locator.37xBtZ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -3788,7 +3797,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.J5L7Wk0"/>
+      <argument type="service" id=".service_locator.qkVaeAI"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -4028,7 +4037,7 @@
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.J5L7Wk0"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.qkVaeAI"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>

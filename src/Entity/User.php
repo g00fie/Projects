@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 use App\Exception\UserException;
 
 /**
@@ -23,6 +25,11 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank()
+     * @Assert\Email()
+     * @Assert\Length(
+     *  max = 180,
+     * )
      */
     private $email;
 
@@ -32,25 +39,48 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @var string The hashed password
      * @ORM\Column(type="string")
      */
-    private $password;
+    private $hasedPassword;
+
+
+    /**
+     * Assert\Length(
+     *  min=7
+     * )
+     */
+    private $password
 
     /**
      * @ORM\Column(type="date", nullable=true)
+     * @Assert\DateTime(
+     *  format="d.m.Y"
+     * )
      */
     private $dateBirth;
 
     /**
      * @ORM\Column(type="string", length=9, nullable=true)
+     * @Assert\Regex("/^\d{9}$/")
      */
     private $phoneNumber;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *  max = 255
+     * )
      */
     private $name;
+
+    public function __construct(UserPasswordEncoderInterface $userPasswordEncoder, string $name, string $email, string $password, ?string $dateBirth=NULL, ?string $phoneNumber=NULL){
+        $this->setName($name)
+            ->setEmail($email)
+            ->setPassword($password, $userPasswordEncoder)
+            ->setDateBirth($dateBirth)
+            ->setPhoneNumber($phoneNumber);
+    }
 
     public function getId(): ?int
     {
@@ -64,11 +94,6 @@ class User implements UserInterface
 
     public function setEmail(string $email): self
     {
-        if(180 < strlen($email))
-            throw new UserException\TooMuchCharactersException();
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-            throw new UserException\WrongEmailValidationException();
-
         $this->email = $email;
 
         return $this;
@@ -108,14 +133,13 @@ class User implements UserInterface
      */
     public function getPassword(): string
     {
-        return (string) $this->password;
+        return (string) $this->hashedPassword;
     }
 
     public function setPassword(string $password, UserPasswordEncoderInterface $userPasswordEncoder): self
     {
-        if(strlen($password) < 7)
-            throw new UserException\TooFewCharactersException();
-        $this->password = $userPasswordEncoder->encodePassword($this, $password);
+        $this->password = $password;
+        $this->hasedPasswordpassword = $userPasswordEncoder->encodePassword($this, $password);
 
         return $this;
     }
@@ -142,20 +166,8 @@ class User implements UserInterface
         return $this->dateBirth;
     }
 
-    public function setDateBirth(?\DateTimeInterface $dateBirth): self
+    public function setDateBirth(?string $dateBirth): self
     {
-        $this->dateBirth = $dateBirth;
-
-        return $this;
-    }
-
-    public function setDateBirthByString(?string $dateBirth): self
-    {
-        if(NULL !== $dateBirth){
-            $dateBirth = \DateTime::createFromFormat('d.m.Y', $dateBirth);
-            if(false === $dateBirth)
-                throw new UserException\WrongDateBirthFormatException();
-        }
         $this->dateBirth = $dateBirth;
 
         return $this;
@@ -168,8 +180,6 @@ class User implements UserInterface
 
     public function setPhoneNumber(?string $phoneNumber): self
     {
-        if((NULL !== $phoneNumber) && (preg_match("/^\d{9}$/", $phoneNumber) == 0))
-            throw new UserException\WrongPhoneNumberFormatException();
         $this->phoneNumber = $phoneNumber;
 
         return $this;
@@ -182,8 +192,6 @@ class User implements UserInterface
 
     public function setName(string $name): self
     {
-        if(255 < strlen($name))
-            return new UserException\TooMuchCharactersException();
         $this->name = $name;
 
         return $this;

@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* starting-page.html.twig */
-class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f1b77e extends \Twig\Template
+/* old_starting-page.html.twig */
+class __TwigTemplate_25194083cd200e0bba6132228d95bf1c10788ad3d761738fb89bb4ca964efb64 extends \Twig\Template
 {
     private $source;
 
@@ -32,13 +32,13 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     protected function doDisplay(array $context, array $blocks = [])
     {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "starting-page.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "old_starting-page.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html><html><head>
     <meta charset=\"utf-8\">
     <title>Nazwa</title>
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <link href=\"http://fonts.googleapis.com/css?family=Lato:400,700\" rel=\"stylesheet\" type=\"text/css\">
     <link rel=\"stylesheet\" href=\"/css/bootstrap4.css\">
     <link rel=\"stylesheet\" href=\"/css/bootstrap3.css\">
@@ -56,7 +56,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <nav class=\"navbar navbar-default navbar-fixed-top\">
       <div class=\"container-fluid\">
         <div class=\"navbar-header\">
-          <button type=\"button\" id=\"togglebutton\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navigationbar\">
+          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navigationbar\">
             <span class=\"sr-only\">Toggle navigation</span>
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
@@ -72,37 +72,12 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
             <li><a href=\"#contact\" class=\"navText\">Kontakt</a></li>
           </ul>
           <ul class=\"nav navbar-nav navbar-right\">
-            <li><a href=\"#\" class=\"navText\" onclick=\"loginclick()\">Zaloguj</a></li>
+            <li><a href=\"#\" class=\"navText\">Zaloguj</a></li>
             <li><a class=\"navText\" id=\"buttonreg\" href=\"#register\">Dołącz do nas</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id=\"logindiv\" class=\"modal\">
-      <div id=\"logreg-forms\" class=\"loginanimate\">
-        <form class=\"form-signin\">
-          <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\"> Zaloguj</h1>
-          <div class=\"social-login\">
-            <button class=\"btn facebook-btn social-btn\" type=\"button\" style=\"font-size: 14px;\"><span><i class=\"fab fa-facebook-f\" style=\"padding-right: 10px\"></i>Zaloguj przez Facebook'a</span></button>
-            <button class=\"btn google-btn social-btn\" type=\"button\" style=\"font-size: 14px;\"><span><img src=\"/img/googleico.svg\" style=\"width: 1.5rem; height: 1.5rem; margin-right: 10px; margin-bottom: 2px\">Zaloguj przez Google</span></button>
-          </div>
-          <p style=\"text-align:center\"> LUB  </p>
-          <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Adres email\" required=\"\" autofocus=\"\">
-          <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Hasło\" required=\"\">
-          
-          <button class=\"btn btn-success btn-block\" type=\"submit\"><i class=\"fas fa-sign-in-alt\" style=\"padding-right: 10px;\"></i>Zaloguj</button>
-          <a href=\"#\" id=\"forgot_pswd\">Zapomniałeś hasła?</a>
-          <hr>
-          
-          <button class=\"btn btn-primary btn-block\" type=\"button\" id=\"btn-signup\"><i class=\"fas fa-user-plus\" style=\"padding-right: 10px;\"></i> Zarejestruj się</button>
-        </form>
-        <form action=\"\" class=\"form-reset\">
-          <input type=\"email\" id=\"resetEmail\" class=\"form-control\" placeholder=\"Adres email\" required=\"\" autofocus=\"\">
-          <button class=\"btn btn-primary btn-block\" type=\"submit\">Zresetuj hasło</button>
-          <a href=\"#\" id=\"cancel_reset\"><i class=\"fas fa-angle-left\"></i> Cofnij</a>
-        </form>   
-      </div>
-    </div>
 
     <section id=\"intro\">
       <div class=\"container-fluid no-padding\">
@@ -191,6 +166,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <p>
                     <a href=\"\" class=\"btn btn-block btn-facebook\"><i class=\"fab fa-facebook-f\" style=\"margin-right: 10px\"></i>Zaloguj przez Facebook'a</a>
                     <a href=\"\" class=\"btn btn-block btn-google\"> <img src=\"/img/googleico.svg\" style=\"width: 1.3rem; height: 1.3rem; margin-right: 10px; margin-bottom: 2px\">Zaloguj przez Google</a>
+                    <a href=\"\" class=\"btn btn-block btn-twitter\"> <i class=\"fab fa-twitter\" style=\"margin-right: 10px\"></i>Zaloguj przez Twitter'a</a>
                   </p>
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
@@ -198,11 +174,11 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   
                 
             ";
-        // line 163
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 163, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
-        // line 164
+        // line 139
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 139, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
+        // line 140
         echo "            ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 164, $this->source); })()), 'form');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 140, $this->source); })()), 'form');
         echo "
         </article>
               </div>
@@ -295,6 +271,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     <script>
     \$(function() {
+      // Smooth Scrolling
       \$('a[href*=\"#\"]:not([href=\"#\"])').click(function() {
         if (location.pathname.replace(/^\\//,'') == this.pathname.replace(/^\\//,'') && location.hostname == this.hostname) {
           var target = \$(this.hash);
@@ -308,39 +285,6 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
         }
       });
     });
-    
-    var modal = document.getElementById('logindiv');
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = \"none\";
-        }
-    } 
-    function toggleResetPswd(e){
-      e.preventDefault();
-      \$('#logreg-forms .form-signin').toggle() 
-      \$('#logreg-forms .form-reset').toggle() 
-    }
-    function toggleSignUp(e){
-    e.preventDefault();
-    \$('#logreg-forms .form-signin').toggle();
-    }    
-    \$(()=>{
-        \$('#logreg-forms #forgot_pswd').click(toggleResetPswd);
-        \$('#logreg-forms #cancel_reset').click(toggleResetPswd);
-    })
-
-    function loginclick(){
-      document.getElementById('logindiv').style.display='block';
-    }
-    if (\$(window).width() < 767) {
-      \$('.nav a').on('click', function(){
-      \$('.btn-navbar').click(); 
-      \$('.navbar-toggle').click();
-      \$('.navbar-toggler').click();
-      });
-    }
-
     </script>
   
 </body></html>";
@@ -351,7 +295,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     public function getTemplateName()
     {
-        return "starting-page.html.twig";
+        return "old_starting-page.html.twig";
     }
 
     public function isTraitable()
@@ -361,7 +305,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     public function getDebugInfo()
     {
-        return array (  204 => 164,  202 => 163,  38 => 1,);
+        return array (  180 => 140,  178 => 139,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -369,7 +313,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
         return new Source("<!DOCTYPE html><html><head>
     <meta charset=\"utf-8\">
     <title>Nazwa</title>
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <link href=\"http://fonts.googleapis.com/css?family=Lato:400,700\" rel=\"stylesheet\" type=\"text/css\">
     <link rel=\"stylesheet\" href=\"/css/bootstrap4.css\">
     <link rel=\"stylesheet\" href=\"/css/bootstrap3.css\">
@@ -387,7 +331,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <nav class=\"navbar navbar-default navbar-fixed-top\">
       <div class=\"container-fluid\">
         <div class=\"navbar-header\">
-          <button type=\"button\" id=\"togglebutton\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navigationbar\">
+          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navigationbar\">
             <span class=\"sr-only\">Toggle navigation</span>
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
@@ -403,37 +347,12 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
             <li><a href=\"#contact\" class=\"navText\">Kontakt</a></li>
           </ul>
           <ul class=\"nav navbar-nav navbar-right\">
-            <li><a href=\"#\" class=\"navText\" onclick=\"loginclick()\">Zaloguj</a></li>
+            <li><a href=\"#\" class=\"navText\">Zaloguj</a></li>
             <li><a class=\"navText\" id=\"buttonreg\" href=\"#register\">Dołącz do nas</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id=\"logindiv\" class=\"modal\">
-      <div id=\"logreg-forms\" class=\"loginanimate\">
-        <form class=\"form-signin\">
-          <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\"> Zaloguj</h1>
-          <div class=\"social-login\">
-            <button class=\"btn facebook-btn social-btn\" type=\"button\" style=\"font-size: 14px;\"><span><i class=\"fab fa-facebook-f\" style=\"padding-right: 10px\"></i>Zaloguj przez Facebook'a</span></button>
-            <button class=\"btn google-btn social-btn\" type=\"button\" style=\"font-size: 14px;\"><span><img src=\"/img/googleico.svg\" style=\"width: 1.5rem; height: 1.5rem; margin-right: 10px; margin-bottom: 2px\">Zaloguj przez Google</span></button>
-          </div>
-          <p style=\"text-align:center\"> LUB  </p>
-          <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Adres email\" required=\"\" autofocus=\"\">
-          <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Hasło\" required=\"\">
-          
-          <button class=\"btn btn-success btn-block\" type=\"submit\"><i class=\"fas fa-sign-in-alt\" style=\"padding-right: 10px;\"></i>Zaloguj</button>
-          <a href=\"#\" id=\"forgot_pswd\">Zapomniałeś hasła?</a>
-          <hr>
-          
-          <button class=\"btn btn-primary btn-block\" type=\"button\" id=\"btn-signup\"><i class=\"fas fa-user-plus\" style=\"padding-right: 10px;\"></i> Zarejestruj się</button>
-        </form>
-        <form action=\"\" class=\"form-reset\">
-          <input type=\"email\" id=\"resetEmail\" class=\"form-control\" placeholder=\"Adres email\" required=\"\" autofocus=\"\">
-          <button class=\"btn btn-primary btn-block\" type=\"submit\">Zresetuj hasło</button>
-          <a href=\"#\" id=\"cancel_reset\"><i class=\"fas fa-angle-left\"></i> Cofnij</a>
-        </form>   
-      </div>
-    </div>
 
     <section id=\"intro\">
       <div class=\"container-fluid no-padding\">
@@ -522,6 +441,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <p>
                     <a href=\"\" class=\"btn btn-block btn-facebook\"><i class=\"fab fa-facebook-f\" style=\"margin-right: 10px\"></i>Zaloguj przez Facebook'a</a>
                     <a href=\"\" class=\"btn btn-block btn-google\"> <img src=\"/img/googleico.svg\" style=\"width: 1.3rem; height: 1.3rem; margin-right: 10px; margin-bottom: 2px\">Zaloguj przez Google</a>
+                    <a href=\"\" class=\"btn btn-block btn-twitter\"> <i class=\"fab fa-twitter\" style=\"margin-right: 10px\"></i>Zaloguj przez Twitter'a</a>
                   </p>
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
@@ -621,6 +541,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     <script>
     \$(function() {
+      // Smooth Scrolling
       \$('a[href*=\"#\"]:not([href=\"#\"])').click(function() {
         if (location.pathname.replace(/^\\//,'') == this.pathname.replace(/^\\//,'') && location.hostname == this.hostname) {
           var target = \$(this.hash);
@@ -634,41 +555,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
         }
       });
     });
-    
-    var modal = document.getElementById('logindiv');
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = \"none\";
-        }
-    } 
-    function toggleResetPswd(e){
-      e.preventDefault();
-      \$('#logreg-forms .form-signin').toggle() 
-      \$('#logreg-forms .form-reset').toggle() 
-    }
-    function toggleSignUp(e){
-    e.preventDefault();
-    \$('#logreg-forms .form-signin').toggle();
-    }    
-    \$(()=>{
-        \$('#logreg-forms #forgot_pswd').click(toggleResetPswd);
-        \$('#logreg-forms #cancel_reset').click(toggleResetPswd);
-    })
-
-    function loginclick(){
-      document.getElementById('logindiv').style.display='block';
-    }
-    if (\$(window).width() < 767) {
-      \$('.nav a').on('click', function(){
-      \$('.btn-navbar').click(); 
-      \$('.navbar-toggle').click();
-      \$('.navbar-toggler').click();
-      });
-    }
-
     </script>
   
-</body></html>", "starting-page.html.twig", "B:\\PROGRAMOWANIE\\PROJEKTY\\umowsie\\templates\\starting-page.html.twig");
+</body></html>", "old_starting-page.html.twig", "B:\\PROGRAMOWANIE\\PROJEKTY\\umowsie\\templates\\old_starting-page.html.twig");
     }
 }
