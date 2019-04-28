@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src">
+  <namespace name="App\Controller">
+    <class name="MainController" src="Controller/MainController.php" description="Main controller to render starting page." xml="classes/App_Controller_MainController.xml"/>
+  </namespace>
+  <namespace name="App\Controller\API">
+    <class name="AuthController" src="Controller/API/AuthController.php" description="Controller related with all API pages involved with Auth (Register, Login etc.)." xml="classes/App_Controller_API_AuthController.xml"/>
+  </namespace>
+  <namespace name="App\Entity">
+    <class name="User" src="Entity/User.php" description="Entity with structure like User in database. Parameters are written using Symfony Validation." xml="classes/App_Entity_User.xml"/>
+  </namespace>
+  <namespace name="App\Repository">
+    <class name="UserRepository" src="Repository/UserRepository.php" xml="classes/App_Repository_UserRepository.xml"/>
+  </namespace>
+  <namespace name="App\Form">
+    <class name="RegisterType" src="Form/RegisterType.php" description="Class to generate register form." xml="classes/App_Form_RegisterType.xml"/>
+  </namespace>
+  <namespace name="App\Helper">
+    <class name="GRecaptcha" src="Helper/GRecaptcha.php" description="Class to help with verify Google Recaptcha v2 Invisible." xml="classes/App_Helper_GRecaptcha.xml"/>
+  </namespace>
+</index>

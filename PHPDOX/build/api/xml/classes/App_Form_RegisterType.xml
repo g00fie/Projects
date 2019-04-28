@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Form\RegisterType" namespace="App\Form" name="RegisterType" abstract="false" final="false" start="19" end="107">
+  <file path="SRC/src/Form" file="RegisterType.php" realpath="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src/Form/RegisterType.php" size="3779" time="2019-04-29T00:48:02+02:00" unixtime="1556491682" sha1="78cf0c1ff010ca2c5ea4f45f103906da4cbd3e15" relative="Form/RegisterType.php"/>
+  <docblock>
+    <description compact="Class to generate register form."/>
+    <author value="Maciej Biliński &lt;thepigmansuper@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Form\AbstractType" namespace="Symfony\Component\Form" name="AbstractType" unresolved="true"/>
+  <method name="buildForm" start="26" end="106" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Method to build a register form."/>
+      <param description="Interface to build a form." type="object" variable="$builder">
+        <type full="Symfony\Component\Form\FormBuilderInterface" namespace="Symfony\Component\Form" name="FormBuilderInterface"/>
+      </param>
+      <param description="@inheritdoc" type="array" variable="$options"/>
+      <return type="object">
+        <type full="App\Form\void" namespace="App\Form" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="builder" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormBuilderInterface" namespace="Symfony\Component\Form" name="FormBuilderInterface"/>
+    </parameter>
+    <parameter name="options" byreference="false" type="array"/>
+  </method>
+</class>

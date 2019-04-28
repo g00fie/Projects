@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src">
+    <dir name="Controller">
+      <file name="MainController.php" size="1178" time="2019-04-29T00:22:24+02:00" unixtime="1556490144" sha1="2e19a6a92c3ec38eeecd5fc0f06a09fbbd7f3ff9" xml="tokens/Controller/MainController.php.xml"/>
+      <dir name="API">
+        <file name="AuthController.php" size="3123" time="2019-04-29T00:33:36+02:00" unixtime="1556490816" sha1="79ec0e7a9ee663b93d7defd6e07dad986d6b2574" xml="tokens/Controller/API/AuthController.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="Entity">
+      <file name="User.php" size="7103" time="2019-04-29T00:45:18+02:00" unixtime="1556491518" sha1="545c91b03d594d392740bb18babaaeb82788decf" xml="tokens/Entity/User.php.xml"/>
+    </dir>
+    <dir name="Repository">
+      <file name="UserRepository.php" size="1422" time="2019-04-29T00:47:56+02:00" unixtime="1556491676" sha1="79f1df5fe6e00f001ed9cb53567604a1e8fa014a" xml="tokens/Repository/UserRepository.php.xml"/>
+    </dir>
+    <dir name="Form">
+      <file name="RegisterType.php" size="3779" time="2019-04-29T00:48:02+02:00" unixtime="1556491682" sha1="78cf0c1ff010ca2c5ea4f45f103906da4cbd3e15" xml="tokens/Form/RegisterType.php.xml"/>
+    </dir>
+    <dir name="Helper">
+      <file name="GRecaptcha.php" size="1386" time="2019-04-29T00:47:58+02:00" unixtime="1556491678" sha1="ab31d2de72354332214057a027f31fba5d7fb969" xml="tokens/Helper/GRecaptcha.php.xml"/>
+    </dir>
+  </dir>
+</source>

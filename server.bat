@@ -1,0 +1,1 @@
+php SRC\bin\console server:run

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\API\AuthController" namespace="App\Controller\API" name="AuthController" abstract="false" final="false" start="22" end="67">
+  <file path="SRC/src/Controller/API" file="AuthController.php" realpath="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src/Controller/API/AuthController.php" size="3123" time="2019-04-29T00:33:36+02:00" unixtime="1556490816" sha1="79ec0e7a9ee663b93d7defd6e07dad986d6b2574" relative="Controller/API/AuthController.php"/>
+  <docblock>
+    <description compact="Controller related with all API pages involved with Auth (Register, Login etc.)."/>
+    <author value="Maciej Biliński &lt;thepigmansuper@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
+  <method name="register" start="37" end="66" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Function used to generate Register API Page. It needs 'name, email, password, recaptcha' sent by POST method. Optional arguments are 'dateBirth' and 'phoneNumber'."/>
+      <route value="( &quot;/API/register&quot;, name=&quot;register&quot; )"/>
+      <param description="HTTP Request" type="object" variable="$request">
+        <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+      </param>
+      <param description="Interface to hash password" type="object" variable="$userPasswordEncoder">
+        <type full="Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface" namespace="Symfony\Component\Security\Core\Encoder" name="UserPasswordEncoderInterface"/>
+      </param>
+      <param description="Interface to use database" type="object" variable="$entityManager">
+        <type full="Doctrine\ORM\EntityManagerInterface" namespace="Doctrine\ORM" name="EntityManagerInterface"/>
+      </param>
+      <param description="Interface to validate User" type="object" variable="$validator">
+        <type full="Symfony\Component\Validator\Validator\ValidatorInterface" namespace="Symfony\Component\Validator\Validator" name="ValidatorInterface"/>
+      </param>
+      <return description="Returns JSON response with bool parameter 'success' and if User's email is used, with bool parameter 'used_email' set to true" type="object">
+        <type full="Symfony\Component\HttpFoundation\JsonResponse" namespace="Symfony\Component\HttpFoundation" name="JsonResponse"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\JsonResponse" namespace="Symfony\Component\HttpFoundation" name="JsonResponse"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+    <parameter name="userPasswordEncoder" byreference="false" type="object">
+      <type full="Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface" namespace="Symfony\Component\Security\Core\Encoder" name="UserPasswordEncoderInterface"/>
+    </parameter>
+    <parameter name="entityManager" byreference="false" type="object">
+      <type full="Doctrine\ORM\EntityManagerInterface" namespace="Doctrine\ORM" name="EntityManagerInterface"/>
+    </parameter>
+    <parameter name="validator" byreference="false" type="object">
+      <type full="Symfony\Component\Validator\Validator\ValidatorInterface" namespace="Symfony\Component\Validator\Validator" name="ValidatorInterface"/>
+    </parameter>
+  </method>
+</class>

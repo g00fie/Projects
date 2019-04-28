@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository" abstract="false" final="false" start="17" end="52">
+  <file path="SRC/src/Repository" file="UserRepository.php" realpath="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src/Repository/UserRepository.php" size="1422" time="2019-04-29T00:47:56+02:00" unixtime="1556491676" sha1="79f1df5fe6e00f001ed9cb53567604a1e8fa014a" relative="Repository/UserRepository.php"/>
+  <docblock>
+    <description/>
+    <todo value="Use this class"/>
+    <method value="User|null find($id, $lockMode = null, $lockVersion = null)"/>
+    <method value="User|null findOneBy(array $criteria, array $orderBy = null)"/>
+    <method value="User[]    findAll()"/>
+    <method value="User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)"/>
+    <author value="Maciej Biliński &lt;thepigmansuper@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository" namespace="Doctrine\Bundle\DoctrineBundle\Repository" name="ServiceEntityRepository" unresolved="true"/>
+  <constructor name="__construct" start="19" end="22" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="registry" byreference="false" type="object">
+      <type full="Symfony\Bridge\Doctrine\RegistryInterface" namespace="Symfony\Bridge\Doctrine" name="RegistryInterface"/>
+    </parameter>
+  </constructor>
+</class>

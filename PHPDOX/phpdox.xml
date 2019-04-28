@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpdox xmlns="http://xml.phpdox.net/config">
+  <project name="Documentation" source="SRC/src" workdir="${basedir}/build/api/xml">
+    <exclude mask="Kernel.php"/>
+    <collector backend="parser" />
+    <generator output="DOCUMENTATION">
+      <build engine="html"/>
+      <file extension="html"/>
+    </generator>
+  </project>
+</phpdox>

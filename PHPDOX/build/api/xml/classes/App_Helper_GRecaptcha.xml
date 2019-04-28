@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Helper\GRecaptcha" namespace="App\Helper" name="GRecaptcha" abstract="false" final="false" start="9" end="46">
+  <file path="SRC/src/Helper" file="GRecaptcha.php" realpath="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src/Helper/GRecaptcha.php" size="1386" time="2019-04-29T00:47:58+02:00" unixtime="1556491678" sha1="ab31d2de72354332214057a027f31fba5d7fb969" relative="Helper/GRecaptcha.php"/>
+  <docblock>
+    <description compact="Class to help with verify Google Recaptcha v2 Invisible."/>
+    <author value="Maciej Biliński &lt;thepigmansuper@gmail.com&gt;"/>
+  </docblock>
+  <constant type="string" name="secretKey" value="&quot;6LeZ9p8UAAAAAGGwkAptewMAwjIQ42s1CUft3ubh&quot;">
+    <docblock>
+      <description compact="It's a secret key from Google. No one should know it."/>
+      <var type="object">
+        <type full="App\Helper\String" namespace="App\Helper" name="String"/>
+      </var>
+    </docblock>
+  </constant>
+  <member name="response" visibility="public" static="false" line="20">
+    <docblock>
+      <description compact="It's a response from Google when user submit the form. It is needed to verify."/>
+      <var type="object">
+        <type full="App\Helper\String" namespace="App\Helper" name="String"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="26" end="28" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Public constructor to prepare class to verify form"/>
+      <param description="@see GRecaptcha::$response" type="string" variable="$response"/>
+    </docblock>
+    <parameter name="response" byreference="false" type="string"/>
+  </constructor>
+  <method name="verify" start="34" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Public function which use curl to get JSON from Google to verify form."/>
+      <return type="object">
+        <type full="App\Helper\bool" namespace="App\Helper" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+</class>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\MainController" namespace="App\Controller" name="MainController" abstract="false" final="false" start="13" end="48">
+  <file path="SRC/src/Controller" file="MainController.php" realpath="B:/PROGRAMOWANIE/PROJEKTY/umowsie/SRC/src/Controller/MainController.php" size="1178" time="2019-04-29T00:22:24+02:00" unixtime="1556490144" sha1="2e19a6a92c3ec38eeecd5fc0f06a09fbbd7f3ff9" relative="Controller/MainController.php"/>
+  <docblock>
+    <description compact="Main controller to render starting page."/>
+    <author value="Maciej Biliński &lt;thepigmansuper@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
+  <method name="index" start="41" end="47" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Controller to render starting page for unlogged users."/>
+      <route value="( &quot;/{_locale}/&quot;, requirements={&quot;_locale&quot;: &quot;pl|en&quot;}, name=&quot;main-page&quot; )"/>
+      <route value="( &quot;/&quot;, name=&quot;main-page-default-locale&quot; )"/>
+      <route value="( &quot;/{_locale}/home&quot;, requirements={&quot;_locale&quot;: &quot;pl|en&quot;}, name=&quot;home&quot; )"/>
+      <route value="( &quot;/home&quot;, name=&quot;home-default-locale&quot; )"/>
+      <return description="Returns rendered by twig strating page." type="object">
+        <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+  </method>
+</class>

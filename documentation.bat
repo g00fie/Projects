@@ -1,0 +1,1 @@
+php PHPDOX\phpdox.phar -f PHPDOX\phpdox.xml
