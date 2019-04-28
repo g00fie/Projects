@@ -11,6 +11,6 @@ include_once $this->targetDirs[3].'\\vendor\\symfony\\http-kernel\\Controller\\A
 include_once $this->targetDirs[3].'\\vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver\\ServiceValueResolver.php';
 
 return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-    'App\\Controller\\API\\AuthController::register' => ['privates', '.service_locator.ploXuKF', 'get_ServiceLocator_PloXuKFService.php', true],
-    'App\\Controller\\API\\AuthController:register' => ['privates', '.service_locator.ploXuKF', 'get_ServiceLocator_PloXuKFService.php', true],
+    'App\\Controller\\API\\AuthController::register' => ['privates', '.service_locator.dvTmdr8', 'get_ServiceLocator_DvTmdr8Service.php', true],
+    'App\\Controller\\API\\AuthController:register' => ['privates', '.service_locator.dvTmdr8', 'get_ServiceLocator_DvTmdr8Service.php', true],
 ])), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
