@@ -3,7 +3,7 @@ const { JSDOM } = jsdom;
 
 var fs = require('fs');
 
-fs.readFile('../SYMFONY/public/starting-page.html', 'utf8', function(err, contents) {
+fs.readFile('../SRC/public/starting-page.html', 'utf8', function(err, contents) {
     const dom = new JSDOM(contents);
     const document = dom.window.document;
     
@@ -26,7 +26,7 @@ fs.readFile('../SYMFONY/public/starting-page.html', 'utf8', function(err, conten
         `;
     }
     
-    fs.writeFile("../SYMFONY/templates/starting-page.html.twig", dom.serialize(), function(err){
+    fs.writeFile("../SRC/templates/starting-page.html.twig", dom.serialize(), function(err){
         console.log("done");
     });
 });

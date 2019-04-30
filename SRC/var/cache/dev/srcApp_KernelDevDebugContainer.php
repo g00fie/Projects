@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerVD5pixv\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'VD5pixv',
-    'container.build_id' => 'a9a1c6ae',
-    'container.build_time' => 1556491188,
+    'container.build_id' => '1ff32abc',
+    'container.build_time' => 1556612723,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerVD5pixv');

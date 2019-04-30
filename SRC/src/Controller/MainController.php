@@ -6,6 +6,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+use App\Form\RegisterType;
+
 /**
  * Main controller to render starting page.
  * @author Maciej Biliński <thepigmansuper@gmail.com>
