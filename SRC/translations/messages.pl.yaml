@@ -14,10 +14,11 @@ ERROR: Błąd
 LOADING: Ładowanie
 INTERNAL_ERROR: Błąd wewnętrzny. Spróbuj ponownie później.
 NO_CONNECTION_ERROR: Sprawdź swoje połączenie z internetem
+NAME: Imię i nazwisko
+EMAIL: Adres email
+MESSAGE: Wiadomość
 
 # USER
-USER_USERNAME: Imię i nazwisko
-USER_EMAIL: Adres email
 USER_PHONE_NUMBER: Numer telefonu
 USER_DATE_BIRTH: Data urodzenia
 USER_PASSWORD: Hasło

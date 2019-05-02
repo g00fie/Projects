@@ -7,6 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use App\Form\RegisterType;
+use App\Form\ContactType;
 
 /**
  * Main controller to render starting page.
@@ -41,10 +42,12 @@ class MainController extends AbstractController{
     * @return Response Returns rendered by twig strating page.
     */
     public function index() : Response{
-        $form = $this->createForm(RegisterType::class);
+        $registerForm = $this->createForm(RegisterType::class);
+        $contactForm = $this->createForm(ContactType::class);
 
         return $this->render("starting-page.html.twig", [
-            "register" => $form->createView()
+            "register" => $registerForm->createView(),
+            "contact" => $contactForm->createView(),
         ]);
     }
 }

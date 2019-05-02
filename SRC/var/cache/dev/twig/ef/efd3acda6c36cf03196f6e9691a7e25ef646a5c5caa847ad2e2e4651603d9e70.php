@@ -49,14 +49,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
 
-    <!-- RECAPTCHA -->
     <script src=\"https://www.google.com/recaptcha/api.js\" async=\"\" defer=\"\"></script>
     <script src=\"/js/auth.js\"></script>
-
-    <!-- SIGN-IN BY GOOGLE -->
-    <script src=\"https://apis.google.com/js/platform.js\" async=\"\" defer=\"\"></script>
-    <meta name=\"google-signin-client_id\" content=\"1016313940824-0aokt49aua9o6oea9sbc342mg6mfjqcc.apps.googleusercontent.com\">
-
   </head>
   <body>
     <nav class=\"navbar navbar-default navbar-fixed-top\">
@@ -196,8 +190,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <h4 class=\"card-title mt-3 text-center\" style=\"font-size: 30px\">Stwórz konto</h4>
                   <p>
                     <a href=\"\" class=\"btn btn-block btn-facebook\"><i class=\"fab fa-facebook-f\" style=\"margin-right: 10px\"></i>Zaloguj przez Facebook'a</a>
-                    <a href=\"#\" class=\"btn btn-block btn-google\"> <img src=\"/img/googleico.svg\" style=\"width: 1.3rem; height: 1.3rem; margin-right: 10px; margin-bottom: 2px\" data-onsuccess=\"onSignIn\">Zaloguj przez Google</a>
-                    <div class=\"g-signin2\" data-onsuccess=\"onSignIn\"></div>
+                    <a href=\"\" class=\"btn btn-block btn-google\"> <img src=\"/img/googleico.svg\" style=\"width: 1.3rem; height: 1.3rem; margin-right: 10px; margin-bottom: 2px\">Zaloguj przez Google</a>
                   </p>
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
@@ -205,11 +198,11 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
 
             ";
-        // line 170
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 170, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
-        // line 171
+        // line 163
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 163, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
+        // line 164
         echo "            ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 171, $this->source); })()), 'form');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 164, $this->source); })()), 'form');
         echo "
         </article>
               </div>
@@ -229,6 +222,14 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
           </div>
           <div class=\"col-md-5 col-sm-5\">
             <div class=\"info-right\">
+                ";
+        // line 183
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 183, $this->source); })()), 'form_start');
+        echo "
+                ";
+        // line 184
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 184, $this->source); })()), 'form_end');
+        echo "
               <form>
                 <div class=\"form-group\">
                   <label>Imię i nazwisko: </label>
@@ -354,7 +355,6 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     }
     </script>
 
-
 </body></html>
 ";
         
@@ -374,7 +374,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     public function getDebugInfo()
     {
-        return array (  211 => 171,  209 => 170,  38 => 1,);
+        return array (  231 => 184,  227 => 183,  204 => 164,  202 => 163,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -393,14 +393,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
 
-    <!-- RECAPTCHA -->
     <script src=\"https://www.google.com/recaptcha/api.js\" async=\"\" defer=\"\"></script>
     <script src=\"/js/auth.js\"></script>
-
-    <!-- SIGN-IN BY GOOGLE -->
-    <script src=\"https://apis.google.com/js/platform.js\" async=\"\" defer=\"\"></script>
-    <meta name=\"google-signin-client_id\" content=\"1016313940824-0aokt49aua9o6oea9sbc342mg6mfjqcc.apps.googleusercontent.com\">
-
   </head>
   <body>
     <nav class=\"navbar navbar-default navbar-fixed-top\">
@@ -540,8 +534,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <h4 class=\"card-title mt-3 text-center\" style=\"font-size: 30px\">Stwórz konto</h4>
                   <p>
                     <a href=\"\" class=\"btn btn-block btn-facebook\"><i class=\"fab fa-facebook-f\" style=\"margin-right: 10px\"></i>Zaloguj przez Facebook'a</a>
-                    <a href=\"#\" class=\"btn btn-block btn-google\"> <img src=\"/img/googleico.svg\" style=\"width: 1.3rem; height: 1.3rem; margin-right: 10px; margin-bottom: 2px\" data-onsuccess=\"onSignIn\">Zaloguj przez Google</a>
-                    <div class=\"g-signin2\" data-onsuccess=\"onSignIn\"></div>
+                    <a href=\"\" class=\"btn btn-block btn-google\"> <img src=\"/img/googleico.svg\" style=\"width: 1.3rem; height: 1.3rem; margin-right: 10px; margin-bottom: 2px\">Zaloguj przez Google</a>
                   </p>
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
@@ -568,6 +561,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
           </div>
           <div class=\"col-md-5 col-sm-5\">
             <div class=\"info-right\">
+                {{ form_start(contact) }}
+                {{ form_end(contact) }}
               <form>
                 <div class=\"form-group\">
                   <label>Imię i nazwisko: </label>
@@ -692,7 +687,6 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
       modal.style.display = \"none\";
     }
     </script>
-
 
 </body></html>
 ", "starting-page.html.twig", "B:\\PROGRAMOWANIE\\PROJEKTY\\umowsie\\SRC\\templates\\starting-page.html.twig");

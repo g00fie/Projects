@@ -28,8 +28,8 @@ class RegisterType extends AbstractType{
         $builder
             ->add("name", TextType::class, [
                 "attr" => [
-                    "placeholder" => "USER_USERNAME",
-                    "title" => "USER_USERNAME",
+                    "placeholder" => "NAME",
+                    "title" => "NAME",
                     "maxlength" => 255,
                 ],
                 "label_attr" => [
@@ -38,8 +38,8 @@ class RegisterType extends AbstractType{
             ])
             ->add("email", EmailType::class, [
                 "attr" => [
-                    "placeholder" => "USER_EMAIL",
-                    "placeholder" => "USER_EMAIL",
+                    "placeholder" => "EMAIL",
+                    "placeholder" => "EMAIL",
                     "maxlength" => 180,
                 ],
                 "label_attr" => [
