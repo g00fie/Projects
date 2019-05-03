@@ -49,8 +49,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
 
-    <script src=\"https://www.google.com/recaptcha/api.js\" async=\"\" defer=\"\"></script>
-    <script src=\"/js/auth.js\"></script>
+    <script src=\"https://www.google.com/recaptcha/api.js?onload=onLoad\" async=\"\" defer=\"\"></script>
+    <script src=\"/js/forms.js\"></script>
   </head>
   <body>
     <nav class=\"navbar navbar-default navbar-fixed-top\">
@@ -222,29 +222,32 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
           </div>
           <div class=\"col-md-5 col-sm-5\">
             <div class=\"info-right\">
-                ";
-        // line 183
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 183, $this->source); })()), 'form_start');
-        echo "
-                ";
-        // line 184
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 184, $this->source); })()), 'form_end');
-        echo "
-              <form>
-                <div class=\"form-group\">
-                  <label>Imię i nazwisko: </label>
-                  <input class=\"form-control\" type=\"text\" name=\"\" value=\"\" placeholder=\"Imię i nazwisko\">
-                </div>
-                <div class=\"form-group\">
-                  <label>Email: </label>
-                  <input class=\"form-control\" type=\"text\" name=\"\" value=\"\" placeholder=\"Email\">
-                </div>
-                <div class=\"form-group\">
-                  <label>Wiadomość: </label>
-                  <textarea class=\"form-control\" name=\"\" value=\"\" placeholder=\"Wiadomość\"></textarea>
-                </div>
-                <button class=\"btn btn-primary btn-block\">Wyślij</button>
-              </form>
+                <form id=\"contactForm\">
+                    <div class=\"form-group text-danger errors\" style=\"display:none;\">
+                        <strong>Błąd!</strong>
+                        <span class=\"internalError\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
+                        <span class=\"noConnectionError\">Sprawdź swoje połączenie z internetem!</span>
+                    </div>
+                  <div class=\"form-group\">
+                    <label>Imię i nazwisko: </label>
+                    <input class=\"form-control\" type=\"text\" name=\"name\" placeholder=\"Imię i nazwisko\">
+                  </div>
+                  <div class=\"form-group\">
+                    <label>Email: </label>
+                    <input class=\"form-control\" type=\"text\" name=\"email\" maxlength=\"180\" placeholder=\"Email\">
+                  </div>
+                  <div class=\"form-group\">
+                    <label>Wiadomość: </label>
+                    <textarea class=\"form-control\" name=\"message\" placeholder=\"Wiadomość\" required=\"required\"></textarea>
+                  </div>
+                  <button class=\"btn btn-primary btn-block\" id=\"submitContact\">
+                      <span class=\"text\">Wyślij</span>
+                      <span class=\"loading\" style=\"display:none;\">
+                          <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
+                      </span>
+                  </button>
+                  <div id=\"contactRecaptcha\"></div>
+                </form>
             </div>
           </div>
         </div>
@@ -355,6 +358,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     }
     </script>
 
+
 </body></html>
 ";
         
@@ -374,7 +378,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
 
     public function getDebugInfo()
     {
-        return array (  231 => 184,  227 => 183,  204 => 164,  202 => 163,  38 => 1,);
+        return array (  204 => 164,  202 => 163,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -393,8 +397,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
 
-    <script src=\"https://www.google.com/recaptcha/api.js\" async=\"\" defer=\"\"></script>
-    <script src=\"/js/auth.js\"></script>
+    <script src=\"https://www.google.com/recaptcha/api.js?onload=onLoad\" async=\"\" defer=\"\"></script>
+    <script src=\"/js/forms.js\"></script>
   </head>
   <body>
     <nav class=\"navbar navbar-default navbar-fixed-top\">
@@ -561,23 +565,32 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
           </div>
           <div class=\"col-md-5 col-sm-5\">
             <div class=\"info-right\">
-                {{ form_start(contact) }}
-                {{ form_end(contact) }}
-              <form>
-                <div class=\"form-group\">
-                  <label>Imię i nazwisko: </label>
-                  <input class=\"form-control\" type=\"text\" name=\"\" value=\"\" placeholder=\"Imię i nazwisko\">
-                </div>
-                <div class=\"form-group\">
-                  <label>Email: </label>
-                  <input class=\"form-control\" type=\"text\" name=\"\" value=\"\" placeholder=\"Email\">
-                </div>
-                <div class=\"form-group\">
-                  <label>Wiadomość: </label>
-                  <textarea class=\"form-control\" name=\"\" value=\"\" placeholder=\"Wiadomość\"></textarea>
-                </div>
-                <button class=\"btn btn-primary btn-block\">Wyślij</button>
-              </form>
+                <form id=\"contactForm\">
+                    <div class=\"form-group text-danger errors\" style=\"display:none;\">
+                        <strong>Błąd!</strong>
+                        <span class=\"internalError\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
+                        <span class=\"noConnectionError\">Sprawdź swoje połączenie z internetem!</span>
+                    </div>
+                  <div class=\"form-group\">
+                    <label>Imię i nazwisko: </label>
+                    <input class=\"form-control\" type=\"text\" name=\"name\" placeholder=\"Imię i nazwisko\">
+                  </div>
+                  <div class=\"form-group\">
+                    <label>Email: </label>
+                    <input class=\"form-control\" type=\"text\" name=\"email\" maxlength=\"180\" placeholder=\"Email\">
+                  </div>
+                  <div class=\"form-group\">
+                    <label>Wiadomość: </label>
+                    <textarea class=\"form-control\" name=\"message\" placeholder=\"Wiadomość\" required=\"required\"></textarea>
+                  </div>
+                  <button class=\"btn btn-primary btn-block\" id=\"submitContact\">
+                      <span class=\"text\">Wyślij</span>
+                      <span class=\"loading\" style=\"display:none;\">
+                          <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
+                      </span>
+                  </button>
+                  <div id=\"contactRecaptcha\"></div>
+                </form>
             </div>
           </div>
         </div>
@@ -687,6 +700,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
       modal.style.display = \"none\";
     }
     </script>
+
 
 </body></html>
 ", "starting-page.html.twig", "B:\\PROGRAMOWANIE\\PROJEKTY\\umowsie\\SRC\\templates\\starting-page.html.twig");

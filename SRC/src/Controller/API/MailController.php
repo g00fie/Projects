@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 use Swift_Mailer;
+use Swift_Message;
 
 use App\Helper\GRecaptcha;
 
@@ -18,20 +19,34 @@ use App\Helper\GRecaptcha;
 class MailController extends AbstractController{
     /**
      * Function to send email from contact form to "thepigmansuper@gmail.com"
+     *
+     * @Route(
+     *    "/API/contact",
+     *    name="contact"
+     * )
+     *
      * @param  Swift_Mailer $mailer Symfony Swift Mailer used to send email
      * @return JsonResponse         Returns JSON with bool parameter "success" to inform about success or failure
      */
-    public function contact(Swift_Mailer $mailer) : JsonResponse{
+    public function contact(Swift_Mailer $mailer, Request $request) : JsonResponse{
         $arguments = $request->request;
-        if($arguments->has("name") && $arguments->has("email") && $arguments->has("message")){
+        if($arguments->has("recaptcha") && $arguments->has("message")){
             $gRecaptcha = new GRecaptcha($arguments->get("recaptcha"));
             if($gRecaptcha->verify() === false)
                 return $this->json(["success" => false]);
 
-
             $message = new Swift_Message("Contact Form");
+
+            $senderEmail = "maciej.bilinski.programming@gmail.com";
+            if($arguments->has("email")){
+                $argumentEmail = $arguments->get("email");
+                if(filter_var($argumentEmail, FILTER_VALIDATE_EMAIL)){
+                    $senderEmail = $argumentEmail;
+                }
+            }
+            $message->setFrom([$senderEmail => ($arguments->has("name") ? $arguments->get("name") : "Unkown")]);
+
             $message
-                ->setFrom([$arguments->get("email") => $arguments->get("name")])
                 ->setTo("thepigmansuper@gmail.com")
                 ->setBody(
                     $arguments->get("message"),

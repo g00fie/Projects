@@ -1,3 +1,13 @@
+var contactRecaptcha;
+
+function onLoad(){
+    contactRecaptcha = grecaptcha.render(document.getElementById("contactRecaptcha"), {
+        sitekey: "6LeZ9p8UAAAAAHcdbffht-BKLHu1rTd94BuxmM9C",
+        size: "invisible",
+        callback: onContactSubmit
+    });
+}
+
 $(document).ready(function(){
     $("#registerForm").submit(function(){
         $("#incorrectPassword, #registerForm div.errors, #internalError, #noConnectionError").hide();
@@ -12,6 +22,16 @@ $(document).ready(function(){
             grecaptcha.execute();
 
         }
+        return false;
+    });
+
+    $("#contactForm").submit(function(){
+        $(this).find("div.errors, .internalError, .noConnectionError").hide();
+        $("#submitContact").attr("disabled", "disabled");
+        $("#submitContact span.text").hide();
+        $("#submitContact span.loading").show();
+
+        grecaptcha.execute(contactRecaptcha);
         return false;
     });
 });
@@ -57,6 +77,48 @@ function onRegisterSubmit(token){
             $("#submitRegister span.loading").hide();
             $("#submitRegister span.text").show();
             grecaptcha.reset();
+        }
+    });
+}
+
+function onContactSubmit(token){
+    var form = $("#contactForm");
+    var name = form.find("input[name='name']").val();
+    var email = form.find("input[name='email']").val();
+    var data = {
+        "message": form.find("textarea[name='message']").val(),
+        "recaptcha": token
+    };
+    if(name.length>0)
+        data["name"] = name;
+    if(email.length>0)
+        data["email"] = email;
+    $.ajax({
+        method: "POST",
+        data: data,
+        url: "/API/contact",
+        error: function(XMLHttpRequest){
+            if (XMLHttpRequest.readyState === 0){
+                form.find(".noConnectionError").show();
+            }else{
+                form.find(".internalError").show();
+            }
+            form.find("div.errors").show();
+        },
+        success: function(data){
+            if(data.success){
+                alert("WYSŁANO!");
+                form.find("input, textarea").val("");
+            }else{
+                console.log("test");
+                form.find(".internalError, div.errors").show();
+            }
+        },
+        complete: function(){
+            $("#submitContact").removeAttr("disabled");
+            $("#submitContact span.loading").hide();
+            $("#submitContact span.text").show();
+            grecaptcha.reset(contactRecaptcha);
         }
     });
 }

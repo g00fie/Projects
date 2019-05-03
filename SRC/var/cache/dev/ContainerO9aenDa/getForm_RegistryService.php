@@ -14,7 +14,6 @@ include_once $this->targetDirs[3].'\\vendor\\symfony\\form\\ResolvedFormTypeFact
 include_once $this->targetDirs[3].'\\vendor\\symfony\\form\\ResolvedFormTypeFactory.php';
 
 return $this->privates['form.registry'] = new \Symfony\Component\Form\FormRegistry([0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-    'App\\Form\\ContactType' => ['privates', 'App\\Form\\ContactType', 'getContactTypeService.php', true],
     'App\\Form\\RegisterType' => ['privates', 'App\\Form\\RegisterType', 'getRegisterTypeService.php', true],
     'Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType' => ['privates', 'form.type.entity', 'getForm_Type_EntityService.php', true],
     'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType' => ['privates', 'form.type.choice', 'getForm_Type_ChoiceService.php', true],

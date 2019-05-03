@@ -16,6 +16,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
         $this->context = $context;
         $this->staticRoutes = [
             '/API/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\API\\AuthController::register'], null, null, null, false, false, null]],
+            '/API/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\API\\MailController::contact'], null, null, null, false, false, null]],
             '/' => [[['_route' => 'main-page-default-locale', '_controller' => 'App\\Controller\\MainController::index'], null, null, null, false, false, null]],
             '/home' => [[['_route' => 'home-default-locale', '_controller' => 'App\\Controller\\MainController::index'], null, null, null, false, false, null]],
         ];
