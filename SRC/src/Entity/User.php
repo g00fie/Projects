@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Entity with structure like User in database. Parameters are written using Symfony Validation.
- * 
+ *
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  *
  * @author Maciej Biliński <thepigmansuper@gmail.com>
@@ -198,6 +198,14 @@ class User implements UserInterface
         $this->password = $userPasswordEncoder->encodePassword($this, $password);
 
         return $this;
+    }
+
+    /**
+     * Method to get unique user field.
+     * @return string Returns email
+     */
+    public function getUsername(){
+        return $this->getEmail();
     }
 
     /**

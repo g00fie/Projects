@@ -1624,6 +1624,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -3714,19 +3722,20 @@
         <argument key="validator" type="service" id="validator"/>
       </argument>
     </service>
-    <service id=".service_locator.Z_.o95M" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.CwrO5B1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="mailer" type="service" id="swiftmailer.mailer.default"/>
+        <argument key="validator" type="service" id="validator"/>
       </argument>
     </service>
-    <service id=".service_locator.Daj.x9E" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.8Y3Tyjj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\API\AuthController::register" type="service" id=".service_locator.dvTmdr8"/>
-        <argument key="App\Controller\API\MailController::contact" type="service" id=".service_locator.Z_.o95M"/>
+        <argument key="App\Controller\API\MailController::contact" type="service" id=".service_locator.CwrO5B1"/>
         <argument key="App\Controller\API\AuthController:register" type="service" id=".service_locator.dvTmdr8"/>
-        <argument key="App\Controller\API\MailController:contact" type="service" id=".service_locator.Z_.o95M"/>
+        <argument key="App\Controller\API\MailController:contact" type="service" id=".service_locator.CwrO5B1"/>
       </argument>
     </service>
     <service id=".service_locator.37xBtZ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -3969,7 +3978,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.Daj.x9E"/>
+      <argument type="service" id=".service_locator.8Y3Tyjj"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -4227,7 +4236,7 @@
     <service id="Swift_Mailer" alias="swiftmailer.mailer.default" public="false"/>
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Daj.x9E"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.8Y3Tyjj"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>

@@ -195,8 +195,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
                   </p>
-
-
+                  
+                
             ";
         // line 163
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 163, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
@@ -223,10 +223,10 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
           <div class=\"col-md-5 col-sm-5\">
             <div class=\"info-right\">
                 <form id=\"contactForm\">
-                    <div class=\"form-group text-danger errors\" style=\"display:none;\">
+                    <div class=\"form-group text-danger errors d-none\">
                         <strong>Błąd!</strong>
-                        <span class=\"internalError\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
-                        <span class=\"noConnectionError\">Sprawdź swoje połączenie z internetem!</span>
+                        <span class=\"internalError d-none\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
+                        <span class=\"noConnectionError d-none\">Sprawdź swoje połączenie z internetem!</span>
                     </div>
                   <div class=\"form-group\">
                     <label>Imię i nazwisko: </label>
@@ -234,19 +234,19 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   </div>
                   <div class=\"form-group\">
                     <label>Email: </label>
-                    <input class=\"form-control\" type=\"text\" name=\"email\" maxlength=\"180\" placeholder=\"Email\">
+                    <input class=\"form-control\" type=\"email\" name=\"email\" maxlength=\"180\" placeholder=\"Email\">
                   </div>
                   <div class=\"form-group\">
                     <label>Wiadomość: </label>
                     <textarea class=\"form-control\" name=\"message\" placeholder=\"Wiadomość\" required=\"required\"></textarea>
                   </div>
-                  <button class=\"btn btn-primary btn-block\" id=\"submitContact\">
+                  <button class=\"btn btn-primary btn-block\" id=\"contactSubmit\">
                       <span class=\"text\">Wyślij</span>
-                      <span class=\"loading\" style=\"display:none;\">
+                      <span class=\"loading d-none\">
                           <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
                       </span>
                   </button>
-                  <div id=\"contactRecaptcha\"></div>
+                  <div style=\"display:none;\" id=\"contactRecaptcha\"></div>
                 </form>
             </div>
           </div>
@@ -357,10 +357,9 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
       modal.style.display = \"none\";
     }
     </script>
+  
 
-
-</body></html>
-";
+</body></html>";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -543,8 +542,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
                   </p>
-
-
+                  
+                
             {% form_theme register 'layouts/form_register_layout.html.twig' %}
             {{ form(register) }}
         </article>
@@ -566,10 +565,10 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
           <div class=\"col-md-5 col-sm-5\">
             <div class=\"info-right\">
                 <form id=\"contactForm\">
-                    <div class=\"form-group text-danger errors\" style=\"display:none;\">
+                    <div class=\"form-group text-danger errors d-none\">
                         <strong>Błąd!</strong>
-                        <span class=\"internalError\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
-                        <span class=\"noConnectionError\">Sprawdź swoje połączenie z internetem!</span>
+                        <span class=\"internalError d-none\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
+                        <span class=\"noConnectionError d-none\">Sprawdź swoje połączenie z internetem!</span>
                     </div>
                   <div class=\"form-group\">
                     <label>Imię i nazwisko: </label>
@@ -577,19 +576,19 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   </div>
                   <div class=\"form-group\">
                     <label>Email: </label>
-                    <input class=\"form-control\" type=\"text\" name=\"email\" maxlength=\"180\" placeholder=\"Email\">
+                    <input class=\"form-control\" type=\"email\" name=\"email\" maxlength=\"180\" placeholder=\"Email\">
                   </div>
                   <div class=\"form-group\">
                     <label>Wiadomość: </label>
                     <textarea class=\"form-control\" name=\"message\" placeholder=\"Wiadomość\" required=\"required\"></textarea>
                   </div>
-                  <button class=\"btn btn-primary btn-block\" id=\"submitContact\">
+                  <button class=\"btn btn-primary btn-block\" id=\"contactSubmit\">
                       <span class=\"text\">Wyślij</span>
-                      <span class=\"loading\" style=\"display:none;\">
+                      <span class=\"loading d-none\">
                           <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
                       </span>
                   </button>
-                  <div id=\"contactRecaptcha\"></div>
+                  <div style=\"display:none;\" id=\"contactRecaptcha\"></div>
                 </form>
             </div>
           </div>
@@ -700,9 +699,8 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
       modal.style.display = \"none\";
     }
     </script>
+  
 
-
-</body></html>
-", "starting-page.html.twig", "B:\\PROGRAMOWANIE\\PROJEKTY\\umowsie\\SRC\\templates\\starting-page.html.twig");
+</body></html>", "starting-page.html.twig", "B:\\PROGRAMOWANIE\\PROJEKTY\\umowsie\\SRC\\templates\\starting-page.html.twig");
     }
 }
