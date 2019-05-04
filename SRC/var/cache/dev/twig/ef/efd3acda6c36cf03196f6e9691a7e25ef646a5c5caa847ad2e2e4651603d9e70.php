@@ -195,16 +195,64 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
                   </p>
-                  
-                
-            ";
-        // line 163
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 163, $this->source); })()), [0 => "layouts/form_register_layout.html.twig"], true);
-        // line 164
-        echo "            ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["register"]) || array_key_exists("register", $context) ? $context["register"] : (function () { throw new RuntimeError('Variable "register" does not exist.', 164, $this->source); })()), 'form');
-        echo "
-        </article>
+                  <form id=\"registerForm\">
+                      <div class=\"form-group text-danger errors d-none\">
+                          <strong>Błąd!</strong>
+                          <span class=\"internalError d-none\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
+                          <span class=\"noConnectionError d-none\">Sprawdź swoje połączenie z internetem!</span>
+                      </div>
+                      <div class=\"form-group input-group\">
+                          <div class=\"input-group-prepend\">
+                              <span class=\"input-group-text\"> <i class=\"fa fa-user\"></i> </span>
+                          </div>
+                          <input name=\"name\" class=\"form-control\" placeholder=\"Imię i nazwisko\" type=\"text\" required=\"required\" maxlength=\"255\">
+                      </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fa fa-envelope\"></i> </span>
+                    </div>
+                        <input name=\"email\" class=\"form-control\" placeholder=\"Adres email\" type=\"email\" required=\"required\" maxlength=\"180\">
+                    </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fa fa-phone\"></i> </span>
+                      </div>
+                      <input name=\"phoneNumber\" class=\"form-control\" placeholder=\"Numer telefonu\" type=\"tel\" maxlength=\"9\" minlength=\"9\" pattern=\"[0-9]{9}\">
+                    </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fas fa-birthday-cake\"></i> </span>
+                      </div>
+                        <input name=\"dateBirth\" type=\"date\" class=\"form-control\">
+                    </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fa fa-lock\"></i> </span>
+                    </div>
+                        <input name=\"password\" class=\"form-control\" placeholder=\"Hasło\" type=\"password\" required=\"required\" minlength=\"7\">
+                    </div>
+                      <div class=\"form-group input-group\">
+                        <div class=\"input-group-prepend\">
+                            <span class=\"input-group-text\"> <i class=\"fa fa-lock\"></i> </span>
+                        </div>
+                        <input name=\"repeated-password\" class=\"form-control invalid\" placeholder=\"Potwierdź hasło\" type=\"password\" required=\"required\" minlength=\"7\" data-validator=\"#registerForm input[name='password']\">
+                        <div class=\"invalid-feedback\">
+                            Podane hasła nie są identyczne!
+                        </div>
+                    </div>
+                    <p class=\"text-center\" style=\"font-size: 12px;\">Klikając przycisk Zarejestruj, akceptujesz nasz <a href=\"\">Regulamin</a>. <a href=\"#\">Zasady dotyczące danych informują</a>, w jaki sposób gromadzimy, użytkujemy i udostępniamy dane użytkowników.</p>
+                    <div class=\"form-group\">
+                        <button type=\"submit\" class=\"btn btn-primary btn-block\" id=\"registerSubmit\">
+                            <span class=\"text\">Wyślij</span>
+                            <span class=\"loading d-none\">
+                                <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
+                            </span>
+                        </button>
+                    </div>
+                    <div style=\"display:none;\" id=\"registerRecaptcha\"></div>
+                    <p class=\"text-center\" style=\"margin-top: -10px;\">Posiadasz już konto? <a href=\"\">Zaloguj się</a> </p>
+                  </form>
+                </article>
               </div>
             </div>
           </div>
@@ -230,7 +278,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                     </div>
                   <div class=\"form-group\">
                     <label>Imię i nazwisko: </label>
-                    <input class=\"form-control\" type=\"text\" name=\"name\" placeholder=\"Imię i nazwisko\">
+                    <input class=\"form-control\" type=\"text\" name=\"name\" maxlength=\"255\" placeholder=\"Imię i nazwisko\">
                   </div>
                   <div class=\"form-group\">
                     <label>Email: </label>
@@ -240,12 +288,14 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                     <label>Wiadomość: </label>
                     <textarea class=\"form-control\" name=\"message\" placeholder=\"Wiadomość\" required=\"required\"></textarea>
                   </div>
-                  <button class=\"btn btn-primary btn-block\" id=\"contactSubmit\">
-                      <span class=\"text\">Wyślij</span>
-                      <span class=\"loading d-none\">
-                          <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
-                      </span>
-                  </button>
+                  <div class=\"form-group\">
+                      <button class=\"btn btn-primary btn-block\" id=\"contactSubmit\">
+                          <span class=\"text\">Wyślij</span>
+                          <span class=\"loading d-none\">
+                              <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
+                          </span>
+                      </button>
+                  </div>
                   <div style=\"display:none;\" id=\"contactRecaptcha\"></div>
                 </form>
             </div>
@@ -370,14 +420,9 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
         return "starting-page.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  204 => 164,  202 => 163,  38 => 1,);
+        return array (  38 => 1,);
     }
 
     public function getSourceContext()
@@ -542,11 +587,64 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                   <p class=\"divider-text\">
                         <span class=\"bg-light\" style=\"background-color: #f1f1f1 !important;\">LUB</span>
                   </p>
-                  
-                
-            {% form_theme register 'layouts/form_register_layout.html.twig' %}
-            {{ form(register) }}
-        </article>
+                  <form id=\"registerForm\">
+                      <div class=\"form-group text-danger errors d-none\">
+                          <strong>Błąd!</strong>
+                          <span class=\"internalError d-none\">Błąd wewnętrzny. Spróbuj ponownie później.</span>
+                          <span class=\"noConnectionError d-none\">Sprawdź swoje połączenie z internetem!</span>
+                      </div>
+                      <div class=\"form-group input-group\">
+                          <div class=\"input-group-prepend\">
+                              <span class=\"input-group-text\"> <i class=\"fa fa-user\"></i> </span>
+                          </div>
+                          <input name=\"name\" class=\"form-control\" placeholder=\"Imię i nazwisko\" type=\"text\" required=\"required\" maxlength=\"255\">
+                      </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fa fa-envelope\"></i> </span>
+                    </div>
+                        <input name=\"email\" class=\"form-control\" placeholder=\"Adres email\" type=\"email\" required=\"required\" maxlength=\"180\">
+                    </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fa fa-phone\"></i> </span>
+                      </div>
+                      <input name=\"phoneNumber\" class=\"form-control\" placeholder=\"Numer telefonu\" type=\"tel\" maxlength=\"9\" minlength=\"9\" pattern=\"[0-9]{9}\">
+                    </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fas fa-birthday-cake\"></i> </span>
+                      </div>
+                        <input name=\"dateBirth\" type=\"date\" class=\"form-control\">
+                    </div>
+                    <div class=\"form-group input-group\">
+                      <div class=\"input-group-prepend\">
+                        <span class=\"input-group-text\"> <i class=\"fa fa-lock\"></i> </span>
+                    </div>
+                        <input name=\"password\" class=\"form-control\" placeholder=\"Hasło\" type=\"password\" required=\"required\" minlength=\"7\">
+                    </div>
+                      <div class=\"form-group input-group\">
+                        <div class=\"input-group-prepend\">
+                            <span class=\"input-group-text\"> <i class=\"fa fa-lock\"></i> </span>
+                        </div>
+                        <input name=\"repeated-password\" class=\"form-control invalid\" placeholder=\"Potwierdź hasło\" type=\"password\" required=\"required\" minlength=\"7\" data-validator=\"#registerForm input[name='password']\">
+                        <div class=\"invalid-feedback\">
+                            Podane hasła nie są identyczne!
+                        </div>
+                    </div>
+                    <p class=\"text-center\" style=\"font-size: 12px;\">Klikając przycisk Zarejestruj, akceptujesz nasz <a href=\"\">Regulamin</a>. <a href=\"#\">Zasady dotyczące danych informują</a>, w jaki sposób gromadzimy, użytkujemy i udostępniamy dane użytkowników.</p>
+                    <div class=\"form-group\">
+                        <button type=\"submit\" class=\"btn btn-primary btn-block\" id=\"registerSubmit\">
+                            <span class=\"text\">Wyślij</span>
+                            <span class=\"loading d-none\">
+                                <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
+                            </span>
+                        </button>
+                    </div>
+                    <div style=\"display:none;\" id=\"registerRecaptcha\"></div>
+                    <p class=\"text-center\" style=\"margin-top: -10px;\">Posiadasz już konto? <a href=\"\">Zaloguj się</a> </p>
+                  </form>
+                </article>
               </div>
             </div>
           </div>
@@ -572,7 +670,7 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                     </div>
                   <div class=\"form-group\">
                     <label>Imię i nazwisko: </label>
-                    <input class=\"form-control\" type=\"text\" name=\"name\" placeholder=\"Imię i nazwisko\">
+                    <input class=\"form-control\" type=\"text\" name=\"name\" maxlength=\"255\" placeholder=\"Imię i nazwisko\">
                   </div>
                   <div class=\"form-group\">
                     <label>Email: </label>
@@ -582,12 +680,14 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                     <label>Wiadomość: </label>
                     <textarea class=\"form-control\" name=\"message\" placeholder=\"Wiadomość\" required=\"required\"></textarea>
                   </div>
-                  <button class=\"btn btn-primary btn-block\" id=\"contactSubmit\">
-                      <span class=\"text\">Wyślij</span>
-                      <span class=\"loading d-none\">
-                          <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
-                      </span>
-                  </button>
+                  <div class=\"form-group\">
+                      <button class=\"btn btn-primary btn-block\" id=\"contactSubmit\">
+                          <span class=\"text\">Wyślij</span>
+                          <span class=\"loading d-none\">
+                              <span class=\"spinner-border\" role=\"status\" aria-hidden=\"true\" style=\"margin-right: 3px; border-width: .2em\"></span> Ładowanie...
+                          </span>
+                      </button>
+                  </div>
                   <div style=\"display:none;\" id=\"contactRecaptcha\"></div>
                 </form>
             </div>

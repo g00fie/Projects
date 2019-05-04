@@ -6,8 +6,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-use App\Form\RegisterType;
-
 /**
  * Main controller to render starting page.
  * @author Maciej Biliński <thepigmansuper@gmail.com>
@@ -41,11 +39,7 @@ class MainController extends AbstractController{
     * @return Response Returns rendered by twig strating page.
     */
     public function index() : Response{
-        $registerForm = $this->createForm(RegisterType::class);
-
-        return $this->render("starting-page.html.twig", [
-            "register" => $registerForm->createView(),
-        ]);
+        return $this->render("starting-page.html.twig");
     }
 }
 ?>

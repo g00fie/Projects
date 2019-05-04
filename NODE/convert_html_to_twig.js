@@ -16,7 +16,7 @@ fs.readFile('../SRC/public/starting-page.html', 'utf8', function(err, contents) 
     });
     
     //zmiana formularza rejestracji na twigową wersję
-    {
+    /*{
         var form = document.getElementById("registerForm");
         var parent = form.parentElement;
         parent.removeChild(form);
@@ -24,7 +24,7 @@ fs.readFile('../SRC/public/starting-page.html', 'utf8', function(err, contents) 
             {% form_theme register 'layouts/form_register_layout.html.twig' %}
             {{ form(register) }}
         `;
-    }
+    }*/
     
     fs.writeFile("../SRC/templates/starting-page.html.twig", dom.serialize(), function(err){
         console.log("done");

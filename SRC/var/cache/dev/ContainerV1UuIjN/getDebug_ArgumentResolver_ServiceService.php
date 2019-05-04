@@ -12,7 +12,7 @@ include_once $this->targetDirs[3].'\\vendor\\symfony\\http-kernel\\Controller\\A
 
 return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
     'App\\Controller\\API\\AuthController::register' => ['privates', '.service_locator.dvTmdr8', 'get_ServiceLocator_DvTmdr8Service.php', true],
-    'App\\Controller\\API\\MailController::contact' => ['privates', '.service_locator.Z_.o95M', 'get_ServiceLocator_Z_O95MService.php', true],
+    'App\\Controller\\API\\MailController::contact' => ['privates', '.service_locator.CwrO5B1', 'get_ServiceLocator_CwrO5B1Service.php', true],
     'App\\Controller\\API\\AuthController:register' => ['privates', '.service_locator.dvTmdr8', 'get_ServiceLocator_DvTmdr8Service.php', true],
-    'App\\Controller\\API\\MailController:contact' => ['privates', '.service_locator.Z_.o95M', 'get_ServiceLocator_Z_O95MService.php', true],
+    'App\\Controller\\API\\MailController:contact' => ['privates', '.service_locator.CwrO5B1', 'get_ServiceLocator_CwrO5B1Service.php', true],
 ])), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
