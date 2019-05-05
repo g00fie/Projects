@@ -22,6 +22,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
             self::$declaredRoutes = [
         '_twig_error_test' => [['code', '_format'], ['_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
         'register' => [[], ['_controller' => 'App\\Controller\\API\\AuthController::register'], [], [['text', '/API/register']], [], []],
+        'contact' => [[], ['_controller' => 'App\\Controller\\API\\MailController::contact'], [], [['text', '/API/contact']], [], []],
         'main-page' => [['_locale'], ['_controller' => 'App\\Controller\\MainController::index'], ['_locale' => 'pl|en'], [['text', '/'], ['variable', '/', 'pl|en', '_locale', true]], [], []],
         'main-page-default-locale' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
         'home' => [['_locale'], ['_controller' => 'App\\Controller\\MainController::index'], ['_locale' => 'pl|en'], [['text', '/home'], ['variable', '/', 'pl|en', '_locale', true]], [], []],

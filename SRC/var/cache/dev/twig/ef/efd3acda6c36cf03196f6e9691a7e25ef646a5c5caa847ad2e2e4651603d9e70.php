@@ -212,6 +212,9 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                         <span class=\"input-group-text\"> <i class=\"fa fa-envelope\"></i> </span>
                     </div>
                         <input name=\"email\" class=\"form-control\" placeholder=\"Adres email\" type=\"email\" required=\"required\" maxlength=\"180\">
+                        <small class=\"form-text text-danger error d-none\">
+                            Istnieje już konto powiązane z tym adresem email.
+                        </small>
                     </div>
                     <div class=\"form-group input-group\">
                       <div class=\"input-group-prepend\">
@@ -235,10 +238,10 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                         <div class=\"input-group-prepend\">
                             <span class=\"input-group-text\"> <i class=\"fa fa-lock\"></i> </span>
                         </div>
-                        <input name=\"repeated-password\" class=\"form-control invalid\" placeholder=\"Potwierdź hasło\" type=\"password\" required=\"required\" minlength=\"7\" data-validator=\"#registerForm input[name='password']\">
-                        <div class=\"invalid-feedback\">
+                        <input name=\"repeated-password\" class=\"form-control\" placeholder=\"Potwierdź hasło\" type=\"password\" required=\"required\" minlength=\"7\">
+                        <small class=\"form-text text-danger error d-none\">
                             Podane hasła nie są identyczne!
-                        </div>
+                        </small>
                     </div>
                     <p class=\"text-center\" style=\"font-size: 12px;\">Klikając przycisk Zarejestruj, akceptujesz nasz <a href=\"\">Regulamin</a>. <a href=\"#\">Zasady dotyczące danych informują</a>, w jaki sposób gromadzimy, użytkujemy i udostępniamy dane użytkowników.</p>
                     <div class=\"form-group\">
@@ -604,6 +607,9 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                         <span class=\"input-group-text\"> <i class=\"fa fa-envelope\"></i> </span>
                     </div>
                         <input name=\"email\" class=\"form-control\" placeholder=\"Adres email\" type=\"email\" required=\"required\" maxlength=\"180\">
+                        <small class=\"form-text text-danger error d-none\">
+                            Istnieje już konto powiązane z tym adresem email.
+                        </small>
                     </div>
                     <div class=\"form-group input-group\">
                       <div class=\"input-group-prepend\">
@@ -627,10 +633,10 @@ class __TwigTemplate_5eccc1cb7f57c8cf933eeb3f0b2cb3eddaa55ab6648e0cd0d464b4fc46f
                         <div class=\"input-group-prepend\">
                             <span class=\"input-group-text\"> <i class=\"fa fa-lock\"></i> </span>
                         </div>
-                        <input name=\"repeated-password\" class=\"form-control invalid\" placeholder=\"Potwierdź hasło\" type=\"password\" required=\"required\" minlength=\"7\" data-validator=\"#registerForm input[name='password']\">
-                        <div class=\"invalid-feedback\">
+                        <input name=\"repeated-password\" class=\"form-control\" placeholder=\"Potwierdź hasło\" type=\"password\" required=\"required\" minlength=\"7\">
+                        <small class=\"form-text text-danger error d-none\">
                             Podane hasła nie są identyczne!
-                        </div>
+                        </small>
                     </div>
                     <p class=\"text-center\" style=\"font-size: 12px;\">Klikając przycisk Zarejestruj, akceptujesz nasz <a href=\"\">Regulamin</a>. <a href=\"#\">Zasady dotyczące danych informują</a>, w jaki sposób gromadzimy, użytkujemy i udostępniamy dane użytkowników.</p>
                     <div class=\"form-group\">

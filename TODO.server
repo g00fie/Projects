@@ -1,2 +1,6 @@
 - konfiguracja SMTP i zmiana wysyłania maili w .env
 - zmiana i konfiguracja na nowym koncie kodów reCaptcha
+- zmienić skrypt włączania (dodać argument z adresem IP)
+
+- dokumentacja JS'a
+- dokumentacja struktury i technologi projektu

@@ -95,9 +95,6 @@ $catalogue = new MessageCatalogue('tl', array (
     'This value should be either negative or zero.' => 'Ang halagang ito ay dapat negatibo o zero.',
     'This value is not a valid timezone.' => 'Ang halagang ito ay hindi wastong timezone.',
     'This password has been leaked in a data breach, it must not be used. Please use another password.' => 'Naikalat ang password na ito sa isang data breach at hindi na dapat gamitin. Mangyaring gumamit ng ibang pang password.',
-    'This form should not contain extra fields.' => 'Ang pormang itong ay hindi dapat magkarron ng dagdag na mga patlang.',
-    'The uploaded file was too large. Please try to upload a smaller file.' => 'Ang ini-upload na file ay masyadong malaki. Pakiulit muling mag-upload ng mas maliit na file.',
-    'The CSRF token is invalid. Please try to resubmit the form.' => 'Hindi balido ang CSRF token. Maagpasa muli ng isang pang porma.',
   ),
   'security' => 
   array (
@@ -205,9 +202,6 @@ $cataloguePl = new MessageCatalogue('pl', array (
     'This is not a valid UUID.' => 'To nie jest poprawne UUID.',
     'This value should be a multiple of {{ compared_value }}.' => 'Ta wartość powinna być wielokrotnością {{ compared_value }}.',
     'This Business Identifier Code (BIC) is not associated with IBAN {{ iban }}.' => 'Ten kod BIC (Business Identifier Code) nie jest powiązany z międzynarodowym numerem rachunku bankowego (IBAN) {{ iban }}.',
-    'This form should not contain extra fields.' => 'Ten formularz nie powinien zawierać dodatkowych pól.',
-    'The uploaded file was too large. Please try to upload a smaller file.' => 'Wgrany plik był za duży. Proszę spróbować wgrać mniejszy plik.',
-    'The CSRF token is invalid. Please try to resubmit the form.' => 'Token CSRF jest nieprawidłowy. Proszę spróbować wysłać formularz ponownie.',
   ),
   'security' => 
   array (
@@ -240,8 +234,9 @@ $cataloguePl = new MessageCatalogue('pl', array (
     'LOADING' => 'Ładowanie',
     'INTERNAL_ERROR' => 'Błąd wewnętrzny. Spróbuj ponownie później.',
     'NO_CONNECTION_ERROR' => 'Sprawdź swoje połączenie z internetem',
-    'USER_USERNAME' => 'Imię i nazwisko',
-    'USER_EMAIL' => 'Adres email',
+    'NAME' => 'Imię i nazwisko',
+    'EMAIL' => 'Adres email',
+    'MESSAGE' => 'Wiadomość',
     'USER_PHONE_NUMBER' => 'Numer telefonu',
     'USER_DATE_BIRTH' => 'Data urodzenia',
     'USER_PASSWORD' => 'Hasło',
@@ -350,9 +345,6 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This value should be either negative or zero.' => 'This value should be either negative or zero.',
     'This value is not a valid timezone.' => 'This value is not a valid timezone.',
     'This password has been leaked in a data breach, it must not be used. Please use another password.' => 'This password has been leaked in a data breach, it must not be used. Please use another password.',
-    'This form should not contain extra fields.' => 'This form should not contain extra fields.',
-    'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
-    'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
   ),
   'security' => 
   array (
@@ -385,8 +377,9 @@ $catalogueEn = new MessageCatalogue('en', array (
     'LOADING' => 'Loading',
     'INTERNAL_ERROR' => 'Internal error. Try again later.',
     'NO_CONNECTION_ERROR' => 'Check your internet connecion',
-    'USER_USERNAME' => 'First name and last name',
-    'USER_EMAIL' => 'Email address',
+    'NAME' => 'First name and last name',
+    'EMAIL' => 'Email address',
+    'MESSAGE' => 'Message',
     'USER_PHONE_NUMBER' => 'Phone number',
     'USER_DATE_BIRTH' => 'Date of birth',
     'USER_PASSWORD' => 'Password',
