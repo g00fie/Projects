@@ -160,8 +160,6 @@ class Migrator
     ) : array {
         $dryRun = $migratorConfiguration->isDryRun();
 
-        $this->configuration->dispatchMigrationEvent(Events::onMigrationsMigrating, $direction, $dryRun);
-
         $connection = $this->configuration->getConnection();
 
         $allOrNothing = $migratorConfiguration->isAllOrNothing();
@@ -178,6 +176,13 @@ class Migrator
 
             foreach ($migrationsToExecute as $version) {
                 $versionExecutionResult = $version->execute($direction, $migratorConfiguration);
+
+                // capture the to Schema for the migration so we have the ability to use
+                // it as the from Schema for the next migration when we are running a dry run
+                // $toSchema may be null in the case of skipped migrations
+                if (! $versionExecutionResult->isSkipped()) {
+                    $migratorConfiguration->setFromSchema($versionExecutionResult->getToSchema());
+                }
 
                 $sql[$version->getVersion()] = $versionExecutionResult->getSql();
                 $time                       += $versionExecutionResult->getTime();

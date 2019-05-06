@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  *
- * @author Maciej Biliński <thepigmansuper@gmail.com>
+ * @author Maciej BiliĹski <thepigmansuper@gmail.com>
  */
 class User implements UserInterface
 {

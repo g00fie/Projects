@@ -2,9 +2,12 @@
 
 namespace App\Repository;
 
-use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+
 use Symfony\Bridge\Doctrine\RegistryInterface;
+
+use App\Entity\User;
+use App\Entity\UserExpiration;
 
 /**
  * @todo Use this class
@@ -19,6 +22,11 @@ class UserRepository extends ServiceEntityRepository
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, User::class);
+    }
+    
+    public function insert(User $user){
+        $queryBuilder = $this->getEntityManager()->createQueryBuilder();
+        $entityManager->persist($user);
     }
 
     // /**
