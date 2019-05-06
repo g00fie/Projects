@@ -38,7 +38,7 @@
             <li><a href="#contact" class="navText">Kontakt</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="javascript:void(0)" class="navText" onclick="loginclick()">Zaloguj</a></li>
+            <li><a href="#" class="navText" onclick="loginclick()">Zaloguj</a></li>
             <li><a class="navText" id="buttonreg" href="#register">Dołącz do nas</a></li>
           </ul>
         </div>
